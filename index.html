@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Kamaleshwaran P — Mechanical Engineer, Design Specialist, 3× Patent Co-Inventor, Motorsport Engineer, and Technology Innovator from Coimbatore, India." />
+  <meta name="keywords" content="Kamaleshwaran, Mechanical Engineer, CAD Designer, SolidWorks, FEA, Patent, Motorsport, Embedded Systems, SRIT, Coimbatore" />
+  <meta name="author" content="Kamaleshwaran P" />
+  <meta property="og:title" content="Kamaleshwaran P | Mechanical Design Engineer & Patent Co-Inventor" />
+  <meta property="og:description" content="Premium portfolio showcasing mechanical design, motorsport engineering, patents, and innovation." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Kamaleshwaran P | Mechanical Design Engineer & Patent Co-Inventor</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- LOADING SCREEN -->
+  <!-- ============================================================ -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <span class="loading-k">K</span><span class="loading-p">P</span>
+      </div>
+      <div class="loading-name">KAMALESHWARAN P</div>
+      <div class="loading-tagline">Mechanical Engineer · Innovator · Designer</div>
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <div class="loading-percent" id="loading-percent">0%</div>
+    </div>
+    <canvas id="loading-canvas"></canvas>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SCROLL PROGRESS -->
+  <!-- ============================================================ -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR -->
+  <!-- ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-logo-k">K</span><span class="nav-logo-p">P</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#expertise" class="nav-link">Expertise</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#patents" class="nav-link">Patents</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <a href="resume.pdf" download class="btn-gold btn-sm">
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="drawer-close" id="drawer-close"><i class="fas fa-times"></i></button>
+    <ul class="drawer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#patents">Patents</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#sports">Sports</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="resume.pdf" download class="btn-gold btn-full">
+      <i class="fas fa-download"></i> Download Resume
+    </a>
+  </div>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================================ -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <i class="fas fa-medal"></i> 3× Patent Co-Inventor · Tamil Nadu Karting Champion
+      </div>
+      <h1 class="hero-name reveal-up delay-1">
+        <span class="hero-first">KAMALESHWARAN</span>
+        <span class="hero-last gold-text"> P</span>
+      </h1>
+      <div class="hero-tagline reveal-up delay-2">
+        <span id="typewriter"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-sub reveal-up delay-3">
+        Mechanical Design Engineer · Design Specialist · Motorsport Engineer · Technology Innovator
+        <br><span class="hero-location"><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu, India</span>
+      </p>
+      <div class="hero-actions reveal-up delay-4">
+        <a href="#contact" class="btn-gold btn-lg">
+          <i class="fas fa-paper-plane"></i> Get In Touch
+        </a>
+        <a href="resume.pdf" download class="btn-outline btn-lg">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+      <div class="hero-socials reveal-up delay-5">
+        <a href="https://linkedin.com/in/kamaleshwaran-p" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Kamaleshwaran-badboy" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:kamaleshwaranperumal07@gmail.com" class="social-icon" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+917397583709" class="social-icon" aria-label="Phone">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+    </a>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- ABOUT SECTION -->
+  <!-- ============================================================ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gold-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col reveal-left">
+          <div class="about-image-wrap">
+            <div class="about-image-placeholder">
+              <i class="fas fa-user-circle"></i>
+              <span>Photo Coming Soon</span>
+            </div>
+            <div class="about-image-border"></div>
+            <div class="about-image-glow"></div>
+          </div>
+          <div class="about-info-chips">
+            <div class="info-chip"><i class="fas fa-graduation-cap"></i> CGPA: 7.93 / 10</div>
+            <div class="info-chip"><i class="fas fa-map-marker-alt"></i> Coimbatore, India</div>
+            <div class="info-chip"><i class="fas fa-birthday-cake"></i> Age: 18</div>
+            <div class="info-chip"><i class="fas fa-language"></i> English · Tamil</div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <h3 class="about-greeting">Hello, I'm <span class="gold-text">Kamaleshwaran</span></h3>
+          <p class="about-text">
+            I'm a <strong>Mechanical Engineering student</strong> at Sri Ramakrishna Institute of Technology, Coimbatore, with a deep passion for <strong>Design Engineering</strong> — from precision CAD modelling and structural analysis to full product development and engineering optimization.
+          </p>
+          <p class="about-text">
+            My primary strength lies in <strong>design</strong>: crafting high-performance solutions that are structurally sound, aesthetically refined, and manufacturing-ready. I've led complete kart designs for state-level championships, co-invented <strong>3 filed Indian Patents</strong>, and presented research at national conferences.
+          </p>
+          <p class="about-text">
+            Beyond core mechanical engineering, I've intentionally built cross-disciplinary skills in <strong>coding, embedded systems, IoT, and AI integration</strong> — not to switch fields, but to become a more versatile, future-ready engineer. As automation and AI reshape industry, a mechanical engineer who understands intelligent systems can design smarter, more impactful products.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number" data-target="3">0</div>
+              <div class="stat-label">Patents Filed</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="2">0</div>
+              <div class="stat-label">State Championships</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="8">0</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-target="6">0</div>
+              <div class="stat-label">Leadership Roles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- EXPERTISE SECTION -->
+  <!-- ============================================================ -->
+  <section id="expertise" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I Do</span>
+        <h2 class="section-title">Core <span class="gold-text">Expertise</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-card reveal-up delay-1">
+          <div class="expertise-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>CAD Design</h3>
+          <p>Precision 3D modelling, 2D drafting, part design, and full assemblies using SolidWorks, AutoCAD, Fusion 360 and Solid Edge. From concept sketches to production-ready drawings.</p>
+        </div>
+        <div class="expertise-card reveal-up delay-2">
+          <div class="expertise-icon"><i class="fas fa-wave-square"></i></div>
+          <h3>FEA & Simulation</h3>
+          <p>Structural analysis, thermal evaluation, and performance simulation using ANSYS Workbench. FEA on chassis, suspension mounts, and critical load-bearing components.</p>
+        </div>
+        <div class="expertise-card reveal-up delay-3">
+          <div class="expertise-icon"><i class="fas fa-boxes"></i></div>
+          <h3>Product Development</h3>
+          <p>End-to-end product lifecycle from concept to prototype. Design optimization, GD&T, tolerance analysis, 3D printing, and rapid prototyping for real-world manufacturing.</p>
+        </div>
+        <div class="expertise-card reveal-up delay-4">
+          <div class="expertise-icon"><i class="fas fa-flag-checkered"></i></div>
+          <h3>Motorsport Engineering</h3>
+          <p>Kart chassis geometry, suspension design, component packaging, and ergonomics for competitive racing. Led SRIT Kart Team to Tamil Nadu Karting Championship title win.</p>
+        </div>
+        <div class="expertise-card reveal-up delay-5">
+          <div class="expertise-icon"><i class="fas fa-microchip"></i></div>
+          <h3>Embedded Systems</h3>
+          <p>Firmware programming for Arduino, ESP32, ESP8266. Sensor integration, actuator control, real-time data acquisition, and embedded communication protocols (UART, I2C, SPI).</p>
+        </div>
+        <div class="expertise-card reveal-up delay-6">
+          <div class="expertise-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI Integration</h3>
+          <p>Integrating AI and computer vision into mechanical systems. Co-invented AI-powered quality inspection system. Experience with neural networks, machine vision, and GraphRAG.</p>
+        </div>
+        <div class="expertise-card reveal-up delay-1">
+          <div class="expertise-icon"><i class="fas fa-flask"></i></div>
+          <h3>Research & Innovation</h3>
+          <p>CFD analysis, heat exchanger research, and academic presentations at national conferences. 3 filed patents. Consistent national finalist in innovation and engineering competitions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SKILLS SECTION -->
+  <!-- ============================================================ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Technical Proficiency</span>
+        <h2 class="section-title">Technical <span class="gold-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-tabs reveal-up">
+        <button class="skills-tab active" data-tab="mechanical">
+          <i class="fas fa-cog"></i> Mechanical
+        </button>
+        <button class="skills-tab" data-tab="programming">
+          <i class="fas fa-code"></i> Programming
+        </button>
+        <button class="skills-tab" data-tab="hardware">
+          <i class="fas fa-microchip"></i> Hardware
+        </button>
+      </div>
+      <div class="skills-content">
+        <!-- Mechanical Tab -->
+        <div class="skills-panel active" id="tab-mechanical">
+          <div class="skills-grid">
+            <div class="skill-item reveal-left">
+              <div class="skill-info"><span>SolidWorks</span><span class="skill-badge">Advanced</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-1">
+              <div class="skill-info"><span>AutoCAD</span><span class="skill-badge">Advanced</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-2">
+              <div class="skill-info"><span>Fusion 360</span><span class="skill-badge">Advanced</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-3">
+              <div class="skill-info"><span>Solid Edge</span><span class="skill-badge">Proficient</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+            </div>
+            <div class="skill-item reveal-right">
+              <div class="skill-info"><span>ANSYS Workbench (FEA)</span><span class="skill-badge">Advanced</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+            </div>
+            <div class="skill-item reveal-right delay-1">
+              <div class="skill-info"><span>MATLAB</span><span class="skill-badge">Proficient</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+            </div>
+            <div class="skill-item reveal-right delay-2">
+              <div class="skill-info"><span>Simulink</span><span class="skill-badge">Proficient</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div>
+            </div>
+            <div class="skill-item reveal-right delay-3">
+              <div class="skill-info"><span>ANSYS Fluent (CFD)</span><span class="skill-badge">Proficient</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Programming Tab -->
+        <div class="skills-panel" id="tab-programming">
+          <div class="skills-grid">
+            <div class="skill-item reveal-left">
+              <div class="skill-info"><span>C / C++</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-1">
+              <div class="skill-info"><span>Embedded C</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-2">
+              <div class="skill-info"><span>HTML5</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-3">
+              <div class="skill-info"><span>CSS3</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+            </div>
+            <div class="skill-item reveal-right">
+              <div class="skill-info"><span>GitHub / Git</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+            </div>
+            <div class="skill-item reveal-right delay-1">
+              <div class="skill-info"><span>Arduino IDE</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Hardware Tab -->
+        <div class="skills-panel" id="tab-hardware">
+          <div class="skills-grid">
+            <div class="skill-item reveal-left">
+              <div class="skill-info"><span>Arduino (Uno/Nano/Mega)</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-1">
+              <div class="skill-info"><span>ESP32 / ESP8266</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-2">
+              <div class="skill-info"><span>IoT / Sensor Integration</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+            </div>
+            <div class="skill-item reveal-left delay-3">
+              <div class="skill-info"><span>Circuit Design & PCB</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div>
+            </div>
+            <div class="skill-item reveal-right">
+              <div class="skill-info"><span>UART / I2C / SPI</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+            </div>
+            <div class="skill-item reveal-right delay-1">
+              <div class="skill-info"><span>Wi-Fi / Bluetooth (Embedded)</span><span class="skill-badge">Working</span></div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- LEADERSHIP SECTION -->
+  <!-- ============================================================ -->
+  <section id="leadership" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Roles & Responsibilities</span>
+        <h2 class="section-title">Leadership <span class="gold-text">Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="leadership-grid">
+        <div class="leadership-card reveal-up delay-1">
+          <div class="leadership-icon"><i class="fas fa-flag-checkered"></i></div>
+          <div class="leadership-body">
+            <div class="leadership-org">SRIT Kart Team</div>
+            <h3 class="leadership-role">Kart Team Lead</h3>
+            <p class="leadership-duration"><i class="fas fa-calendar"></i> 2023 – Present</p>
+            <p class="leadership-desc">Led end-to-end kart operations across design planning, fabrication, and competition. Delivered Tamil Nadu Karting Championship title win.</p>
+          </div>
+        </div>
+        <div class="leadership-card reveal-up delay-2">
+          <div class="leadership-icon"><i class="fas fa-pen-ruler"></i></div>
+          <div class="leadership-body">
+            <div class="leadership-org">SRIT Kart Team</div>
+            <h3 class="leadership-role">Design Head — Kart Team</h3>
+            <p class="leadership-duration"><i class="fas fa-calendar"></i> 2023 – Present</p>
+            <p class="leadership-desc">Led all CAD design: chassis geometry, component packaging, ergonomics, and compliance using SolidWorks, AutoCAD, Fusion 360.</p>
+          </div>
+        </div>
+        <div class="leadership-card reveal-up delay-3">
+          <div class="leadership-icon"><i class="fas fa-chart-bar"></i></div>
+          <div class="leadership-body">
+            <div class="leadership-org">SRIT Kart Team</div>
+            <h3 class="leadership-role">Analysis Head — Kart Team</h3>
+            <p class="leadership-duration"><i class="fas fa-calendar"></i> 2023 – Present</p>
+            <p class="leadership-desc">Led ANSYS FEA on chassis and critical components, identified failure points, improved structural reliability.</p>
+          </div>
+        </div>
+        <div class="leadership-card reveal-up delay-4">
+          <div class="leadership-icon"><i class="fas fa-drafting-compass"></i></div>
+          <div class="leadership-body">
+            <div class="leadership-org">ASME SRIT Chapter</div>
+            <h3 class="leadership-role">Design Head — ASME</h3>
+            <p class="leadership-duration"><i class="fas fa-calendar"></i> 2023 – Present</p>
+            <p class="leadership-desc">Head the design vertical — responsible for all visual design, technical posters, and presentation materials. Contributed to ASME TN Novate 2024 & 2025.</p>
+          </div>
+        </div>
+        <div class="leadership-card reveal-up delay-5">
+          <div class="leadership-icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="leadership-body">
+            <div class="leadership-org">HIVE — SRIT</div>
+            <h3 class="leadership-role">Innovation Ambassador</h3>
+            <p class="leadership-duration"><i class="fas fa-calendar"></i> 2023 – Present</p>
+            <p class="leadership-desc">Promotes innovation culture, facilitates workshops, mentors aspiring innovators, and bridges student ideas with entrepreneurship resources.</p>
+          </div>
+        </div>
+        <div class="leadership-card reveal-up delay-6">
+          <div class="leadership-icon"><i class="fas fa-globe"></i></div>
+          <div class="leadership-body">
+            <div class="leadership-org">Rotaract International — SRIT</div>
+            <h3 class="leadership-role">International Service Director</h3>
+            <p class="leadership-duration"><i class="fas fa-calendar"></i> 2023 – Present</p>
+            <p class="leadership-desc">Coordinates international service projects, leads community engagement, and represents SRIT in international service domains.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Membership Strip -->
+      <div class="memberships reveal-up">
+        <div class="membership-label">Professional Memberships:</div>
+        <div class="membership-tags">
+          <span class="mem-tag">ASME</span>
+          <span class="mem-tag">SAE India</span>
+          <span class="mem-tag">IIC</span>
+          <span class="mem-tag">Rotaract</span>
+          <span class="mem-tag">HIVE</span>
+          <span class="mem-tag">ASPOMERS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PROJECTS SECTION -->
+  <!-- ============================================================ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gold-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="project-filters reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="mechanical">Mechanical</button>
+        <button class="filter-btn" data-filter="patent">Patents</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="research">Research</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal-up delay-1" data-category="patent" data-project="0">
+          <div class="project-img patent-bg">
+            <div class="project-img-overlay">
+              <span class="project-tag-badge patent-badge"><i class="fas fa-certificate"></i> Patent Filed</span>
+            </div>
+            <div class="project-icon-large"><i class="fas fa-robot"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">AI</span><span class="ptag">Computer Vision</span><span class="ptag">Patent</span>
+            </div>
+            <h3 class="project-title">AI-Based Quality Inspection System</h3>
+            <p class="project-desc">Co-invented AI-powered quality inspection system for industrial quality departments using computer vision to automate defect detection of mechanical components.</p>
+            <button class="btn-project-view" onclick="openProjectModal(0)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal-up delay-2" data-category="patent" data-project="1">
+          <div class="project-img rover-bg">
+            <div class="project-img-overlay">
+              <span class="project-tag-badge patent-badge"><i class="fas fa-certificate"></i> Patent Filed</span>
+            </div>
+            <div class="project-icon-large"><i class="fas fa-satellite-dish"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">Autonomous</span><span class="ptag">Embedded</span><span class="ptag">Patent</span>
+            </div>
+            <h3 class="project-title">Autonomous Rover System</h3>
+            <p class="project-desc">Co-designed a fully autonomous rover integrating mechanical design, embedded control systems, and navigation algorithms. End-to-end from frame design to firmware.</p>
+            <button class="btn-project-view" onclick="openProjectModal(1)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal-up delay-3" data-category="patent" data-project="2">
+          <div class="project-img ar-bg">
+            <div class="project-img-overlay">
+              <span class="project-tag-badge patent-badge"><i class="fas fa-certificate"></i> Patent Filed</span>
+            </div>
+            <div class="project-icon-large"><i class="fas fa-vr-cardboard"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">AR</span><span class="ptag">Industry 4.0</span><span class="ptag">Patent</span>
+            </div>
+            <h3 class="project-title">AR-Based Assembly Guidance System</h3>
+            <p class="project-desc">Co-developed AR-based intelligent system for real-time assembly guidance and torque monitoring for industrial valve manufacturing.</p>
+            <button class="btn-project-view" onclick="openProjectModal(2)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal-up delay-4" data-category="software" data-project="3">
+          <div class="project-img scoreboard-bg">
+            <div class="project-icon-large"><i class="fas fa-trophy"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">Hardware</span><span class="ptag">Electronics</span><span class="ptag">IoT</span>
+            </div>
+            <h3 class="project-title">PointIQ — Sports Scoreboard</h3>
+            <p class="project-desc">Designed and developed a real-time sports scoreboard system with live score management. Hands-on component interfacing, data communication protocols, and signal flow.</p>
+            <button class="btn-project-view" onclick="openProjectModal(3)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal-up delay-5" data-category="mechanical" data-project="4">
+          <div class="project-img kart-bg">
+            <div class="project-img-overlay">
+              <span class="project-tag-badge win-badge"><i class="fas fa-trophy"></i> Title Won</span>
+            </div>
+            <div class="project-icon-large"><i class="fas fa-flag-checkered"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">SolidWorks</span><span class="ptag">ANSYS</span><span class="ptag">Motorsport</span>
+            </div>
+            <h3 class="project-title">Kart Design & Analysis</h3>
+            <p class="project-desc">Complete end-to-end kart design and FEA for Tamil Nadu Karting Championship Season 02. Chassis geometry, suspension layout, and ANSYS structural validation.</p>
+            <button class="btn-project-view" onclick="openProjectModal(4)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal-up delay-6" data-category="research" data-project="5">
+          <div class="project-img heatex-bg">
+            <div class="project-img-overlay">
+              <span class="project-tag-badge conf-badge"><i class="fas fa-microscope"></i> National Conference</span>
+            </div>
+            <div class="project-icon-large"><i class="fas fa-fire"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">CFD</span><span class="ptag">ANSYS Fluent</span><span class="ptag">Research</span>
+            </div>
+            <h3 class="project-title">Pebble Bed Heat Exchanger Research</h3>
+            <p class="project-desc">CFD analysis and energy storage research on pebble bed heat exchangers. Evaluated heat transfer coefficients, pressure drop, and thermal storage efficiency.</p>
+            <button class="btn-project-view" onclick="openProjectModal(5)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card reveal-up delay-1" data-category="research" data-project="6">
+          <div class="project-img solar-bg">
+            <div class="project-img-overlay">
+              <span class="project-tag-badge conf-badge"><i class="fas fa-book"></i> Published</span>
+            </div>
+            <div class="project-icon-large"><i class="fas fa-sun"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">Thermal</span><span class="ptag">Renewable</span><span class="ptag">Research</span>
+            </div>
+            <h3 class="project-title">Shell & Tube Heat Exchanger with Solar Collector</h3>
+            <p class="project-desc">Performance evaluation of shell and tube heat exchangers integrated with parabolic solar collectors for renewable thermal energy applications.</p>
+            <button class="btn-project-view" onclick="openProjectModal(6)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card reveal-up delay-2" data-category="software" data-project="7">
+          <div class="project-img virtual-bg">
+            <div class="project-icon-large"><i class="fas fa-globe-asia"></i></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">Web Dev</span>
+            </div>
+            <h3 class="project-title">Virtual Site Development — SRIT</h3>
+            <p class="project-desc">Developed a virtual site platform for SRIT campus using HTML5 and CSS3. Navigation flow, multimedia integration, and virtual visualization for institutional outreach.</p>
+            <button class="btn-project-view" onclick="openProjectModal(7)">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PATENTS SECTION -->
+  <!-- ============================================================ -->
+  <section id="patents" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Intellectual Property</span>
+        <h2 class="section-title">Patents & <span class="gold-text">Innovations</span></h2>
+        <div class="section-line"></div>
+        <p class="section-sub">3 filed Indian Patents (2025) — combining mechanical domain expertise with AI, embedded systems, and emerging technologies.</p>
+      </div>
+      <div class="patents-grid">
+
+        <div class="patent-card reveal-up delay-1">
+          <div class="patent-stamp">PATENT APPLIED</div>
+          <div class="patent-header">
+            <div class="patent-icon"><i class="fas fa-brain"></i></div>
+            <div class="patent-meta">
+              <span class="patent-country"><i class="fas fa-flag"></i> India</span>
+              <span class="patent-year">Filed 2025</span>
+            </div>
+          </div>
+          <h3 class="patent-title">AI-Based Quality Inspection System for Industrial Quality Departments</h3>
+          <p class="patent-desc">AI-powered inspection system leveraging computer vision to automate defect detection and quality assessment of mechanical parts. Reduces human error and elevates production standards.</p>
+          <div class="patent-tech-tags">
+            <span>AI / CV</span><span>Mechanical</span><span>Hardware</span>
+          </div>
+          <div class="patent-role">Role: <strong>Co-Inventor</strong></div>
+        </div>
+
+        <div class="patent-card reveal-up delay-2">
+          <div class="patent-stamp">PATENT APPLIED</div>
+          <div class="patent-header">
+            <div class="patent-icon"><i class="fas fa-satellite-dish"></i></div>
+            <div class="patent-meta">
+              <span class="patent-country"><i class="fas fa-flag"></i> India</span>
+              <span class="patent-year">Filed 2025</span>
+            </div>
+          </div>
+          <h3 class="patent-title">Autonomous Rover System</h3>
+          <p class="patent-desc">Autonomous rover integrating mechanical structural design with embedded control, navigation, and movement capabilities. End-to-end from frame design and fabrication to firmware programming.</p>
+          <div class="patent-tech-tags">
+            <span>Embedded</span><span>Mechanical Design</span><span>Navigation</span>
+          </div>
+          <div class="patent-role">Role: <strong>Co-Inventor</strong></div>
+        </div>
+
+        <div class="patent-card reveal-up delay-3">
+          <div class="patent-stamp">PATENT APPLIED</div>
+          <div class="patent-header">
+            <div class="patent-icon"><i class="fas fa-vr-cardboard"></i></div>
+            <div class="patent-meta">
+              <span class="patent-country"><i class="fas fa-flag"></i> India</span>
+              <span class="patent-year">Filed 2025</span>
+            </div>
+          </div>
+          <h3 class="patent-title">Augmented Reality Based Intelligent Assembly Guidance & Torque Monitoring System</h3>
+          <p class="patent-desc">AR-based system providing real-time assembly guidance and torque monitoring for industrial valve manufacturing. Improves precision, safety, and operational efficiency.</p>
+          <div class="patent-tech-tags">
+            <span>AR</span><span>Software</span><span>Industrial</span>
+          </div>
+          <div class="patent-role">Role: <strong>Co-Inventor</strong></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- RESEARCH SECTION -->
+  <!-- ============================================================ -->
+  <section id="research" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Academic Contributions</span>
+        <h2 class="section-title">Research & <span class="gold-text">Publications</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="research-grid">
+
+        <div class="research-card reveal-up delay-1">
+          <div class="research-level national">National Level</div>
+          <div class="research-icon"><i class="fas fa-fire-flame-curved"></i></div>
+          <h3 class="research-title">Energy Stored and CFD Analysis of Pebble Bed Heat Exchanger</h3>
+          <p class="research-venue"><i class="fas fa-university"></i> Dr. N.G.P Institute of Technology</p>
+          <p class="research-conf">National Conference on Ghost Manufacturing and Digital Supply Chain for Viksit Bharat 2047</p>
+          <div class="research-tags">
+            <span>CFD</span><span>Thermal</span><span>Energy Storage</span>
+          </div>
+        </div>
+
+        <div class="research-card reveal-up delay-2">
+          <div class="research-level national published">Published</div>
+          <div class="research-icon"><i class="fas fa-sun"></i></div>
+          <h3 class="research-title">Performance Evaluation of Various Shell and Tubes in Heat Exchanger with Parabolic Solar Collector</h3>
+          <p class="research-venue"><i class="fas fa-university"></i> SRM Institute of Technology</p>
+          <p class="research-conf">National Conference — Published Conference Paper</p>
+          <div class="research-tags">
+            <span>Solar</span><span>Heat Transfer</span><span>Renewable Energy</span>
+          </div>
+        </div>
+
+        <div class="research-card reveal-up delay-3">
+          <div class="research-level university">University Level</div>
+          <div class="research-icon"><i class="fas fa-scroll"></i></div>
+          <h3 class="research-title">FORSCH'2025 — Paper Presentation</h3>
+          <p class="research-venue"><i class="fas fa-university"></i> Anna University Regional Campus</p>
+          <p class="research-conf">University-Level Research Paper Presentation</p>
+          <div class="research-tags">
+            <span>Research</span><span>Mechanical</span><span>Innovation</span>
+          </div>
+        </div>
+
+        <div class="research-card reveal-up delay-4">
+          <div class="research-level institution">Institutional</div>
+          <div class="research-icon"><i class="fas fa-award"></i></div>
+          <h3 class="research-title">Engineers Day Technical Paper Presentation</h3>
+          <p class="research-venue"><i class="fas fa-university"></i> Sri Ramakrishna Institute of Technology</p>
+          <p class="research-conf">Institutional Technical Paper Presentation — Engineers Day</p>
+          <div class="research-tags">
+            <span>Technical</span><span>Engineering</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- ACHIEVEMENTS SECTION -->
+  <!-- ============================================================ -->
+  <section id="achievements" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Track Record</span>
+        <h2 class="section-title">Achievements & <span class="gold-text">Awards</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="achievement-card reveal-up delay-1">
+          <div class="ach-icon gold-icon"><i class="fas fa-trophy"></i></div>
+          <div class="ach-badge">State Level</div>
+          <h3>Tamil Nadu Karting Championship</h3>
+          <p>Title Winner — Led SRIT Kart Team as Team Lead, Design Head & Analysis Head. Autosports category victory at Prozone Mall, Coimbatore.</p>
+        </div>
+
+        <div class="achievement-card reveal-up delay-2">
+          <div class="ach-icon gold-icon"><i class="fas fa-certificate"></i></div>
+          <div class="ach-badge">India 2025</div>
+          <h3>3× Patent Co-Inventor</h3>
+          <p>Co-inventor on three filed Indian Patents — AR assembly guidance, autonomous rover system, and AI quality inspection system.</p>
+        </div>
+
+        <div class="achievement-card reveal-up delay-3">
+          <div class="ach-icon gold-icon"><i class="fas fa-dumbbell"></i></div>
+          <div class="ach-badge">State Level</div>
+          <h3>Two-Time State Weightlifting Champion</h3>
+          <p>Open State Weightlifting Champion in 60 kg Category — demonstrates the same discipline and goal-setting applied in engineering leadership.</p>
+        </div>
+
+        <div class="achievement-card reveal-up delay-4">
+          <div class="ach-icon silver-icon"><i class="fas fa-medal"></i></div>
+          <div class="ach-badge">National</div>
+          <h3>SIH Internal Round — 1st Place</h3>
+          <p>Won First Place in Smart India Hackathon internal round — advanced the team to the next stage of the national hackathon.</p>
+        </div>
+
+        <div class="achievement-card reveal-up delay-5">
+          <div class="ach-icon silver-icon"><i class="fas fa-star"></i></div>
+          <div class="ach-badge">National</div>
+          <h3>National-Level Finalist — Multiple</h3>
+          <p>Reached finals in Caterpillar Autonomy Challenge, MSME Idea Hackathon, Statathon, and Pivot Challenge — consistent top performer nationally.</p>
+        </div>
+
+        <div class="achievement-card reveal-up delay-6">
+          <div class="ach-icon silver-icon"><i class="fas fa-microscope"></i></div>
+          <div class="ach-badge">National</div>
+          <h3>National Research Presenter</h3>
+          <p>Presented research at two national-level conferences (NGP Institute & SRM Institute) and one university-level event (Anna University Regional Campus).</p>
+        </div>
+
+        <div class="achievement-card reveal-up delay-1">
+          <div class="ach-icon bronze-icon"><i class="fas fa-users-gear"></i></div>
+          <div class="ach-badge">ASME</div>
+          <h3>Design Head — ASME SRIT</h3>
+          <p>Appointed Design Head of ASME SRIT Student Section — recognized for design leadership within a prestigious national engineering society chapter.</p>
+        </div>
+
+        <div class="achievement-card reveal-up delay-2">
+          <div class="ach-icon bronze-icon"><i class="fas fa-globe"></i></div>
+          <div class="ach-badge">Rotaract</div>
+          <h3>International Service Director</h3>
+          <p>Selected as International Service Director, Rotaract International, SRIT Chapter — recognized for leadership and service excellence.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TIMELINE SECTION -->
+  <!-- ============================================================ -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Career <span class="gold-text">Timeline</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2021</div>
+            <h3>10th Boards — SSLC</h3>
+            <p>Kongunadu Matric Higher Secondary School — Secured <strong>87.6%</strong>. Strong foundation in science and mathematics.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2023</div>
+            <h3>12th Boards — HSC</h3>
+            <p>Kongunadu Matric HSS, Namakkal — Secured <strong>80.1%</strong>. Specialized in Mathematics, Physics, Chemistry.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2023</div>
+            <h3>B.E. Mechanical Engineering — SRIT</h3>
+            <p>Sri Ramakrishna Institute of Technology, Coimbatore. Currently maintaining <strong>CGPA: 7.93/10</strong>. Expected graduation 2028.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2023</div>
+            <h3>ASME Design Head · Kart Team Lead · Rotaract Director</h3>
+            <p>Simultaneously took on <strong>6 leadership roles</strong> — ASME Design Head, Kart Team Lead, Design Head, Analysis Head, Innovation Ambassador, Rotaract Director.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2024</div>
+            <h3>Virtual Site Development Internship</h3>
+            <p>Developed full virtual site project for SRIT campus using HTML5 & CSS3. Applied real-world project management and engineering problem-solving.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2024</div>
+            <h3>Tamil Nadu Karting Championship — Title Won</h3>
+            <p>Led SRIT Kart Team to <strong>title victory</strong> at Tamil Nadu Karting Championship Season 02, Prozone Mall, Coimbatore — as Team Lead, Design Head & Analysis Head.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2025</div>
+            <h3>3 Indian Patents Filed</h3>
+            <p>Co-invented and filed <strong>3 Indian Patents</strong>: AI Quality Inspection System, Autonomous Rover System, and AR Assembly Guidance System.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2025</div>
+            <h3>National Conferences & Research Presentations</h3>
+            <p>Presented research at NGP Institute of Technology and SRM Institute of Technology — <strong>nationally recognized researcher</strong>.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left current">
+          <div class="timeline-dot pulse-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year current-year">Now</div>
+            <h3>Continuing to Build, Innovate & Lead</h3>
+            <p>Actively pursuing advanced design projects, expanding AI + Mechanical integration skills, and targeting senior design engineering roles globally.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SPORTS SECTION -->
+  <!-- ============================================================ -->
+  <section id="sports" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Beyond Engineering</span>
+        <h2 class="section-title">Sports & <span class="gold-text">Personality</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="sports-grid">
+        <div class="sport-card reveal-up delay-1">
+          <div class="sport-icon"><i class="fas fa-dumbbell"></i></div>
+          <div class="sport-badge">2× State Champion</div>
+          <h3>Open State Weightlifting Champion</h3>
+          <p>Two-time Open State Weightlifting Champion in the 60 kg Category. The same discipline, goal-setting, and mental resilience I apply in engineering competitions.</p>
+        </div>
+        <div class="sport-card reveal-up delay-2">
+          <div class="sport-icon"><i class="fas fa-person-running"></i></div>
+          <div class="sport-badge">Competitive</div>
+          <h3>Competitive Bodybuilder</h3>
+          <p>Structured, disciplined athlete with a consistent training regimen — demonstrating commitment, physical excellence, and the power of systematic effort.</p>
+        </div>
+        <div class="sport-card reveal-up delay-3">
+          <div class="sport-icon"><i class="fas fa-basketball"></i></div>
+          <div class="sport-badge">Team Player</div>
+          <h3>Basketball Player</h3>
+          <p>Active team sport participant, demonstrating teamwork, communication, and on-court leadership — the same skills I bring to cross-functional engineering teams.</p>
+        </div>
+      </div>
+      <div class="personality-quote reveal-up">
+        <blockquote>
+          "I believe that the same discipline it takes to win a state championship is the same discipline it takes to file a patent, lead a kart team, and build systems that matter."
+        </blockquote>
+        <cite>— Kamaleshwaran P</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TESTIMONIALS SECTION -->
+  <!-- ============================================================ -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">What They Say</span>
+        <h2 class="section-title">Testimonials & <span class="gold-text">References</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal-up delay-1">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"Kamaleshwaran demonstrates exceptional design thinking and leadership. His work on the kart project and patent innovations shows a rare combination of technical depth and creative problem-solving that is truly impressive for someone his age."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><i class="fas fa-user-tie"></i></div>
+            <div class="testimonial-info">
+              <strong>Mr. Immanuel R</strong>
+              <span>Professor — Mechanical Engineering, SRIT</span>
+              <span class="testimonial-contact">immanual.me@srit.org</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-up delay-2">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"An incredibly driven student who consistently bridges the gap between mechanical engineering and cutting-edge technology. His contributions to our patent projects demonstrated both technical excellence and strong collaborative leadership."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><i class="fas fa-user-tie"></i></div>
+            <div class="testimonial-info">
+              <strong>Ms. Sanjana N</strong>
+              <span>Professor — CSE, SRIT</span>
+              <span class="testimonial-contact">sanjana.cse@sritcbe.ac.in</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal-up delay-3">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"Working alongside Kamaleshwaran in the kart team was an experience of watching a true leader in action. He managed design, analysis, and the entire team strategy with remarkable clarity — and delivered us a championship title."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+            <div class="testimonial-info">
+              <strong>Teammate — SRIT Kart Team</strong>
+              <span>Tamil Nadu Karting Championship Season 02</span>
+              <span class="testimonial-contact">Placeholder — to be updated</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CONTACT SECTION -->
+  <!-- ============================================================ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="gold-text">Touch</span></h2>
+        <div class="section-line"></div>
+        <p class="section-sub">Open to design engineering roles, product development opportunities, motorsport engineering projects, and research collaborations.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:kamaleshwaranperumal07@gmail.com" class="contact-value">kamaleshwaranperumal07@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <a href="tel:+917397583709" class="contact-value">+91 73975 83709</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <a href="https://linkedin.com/in/kamaleshwaran-p" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/kamaleshwaran-p</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <a href="https://github.com/Kamaleshwaran-badboy" target="_blank" rel="noopener" class="contact-value">github.com/Kamaleshwaran-badboy</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-label">Location</div>
+              <span class="contact-value">Coimbatore, Tamil Nadu, India</span>
+            </div>
+          </div>
+          <div class="contact-availability">
+            <div class="availability-dot"></div>
+            <span>Available for opportunities and collaborations</span>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" name="email" placeholder="john@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="subject" placeholder="Design Engineering Opportunity" required />
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Tell me about the opportunity, project, or collaboration..." required></textarea>
+            </div>
+            <button type="submit" class="btn-gold btn-full btn-lg" id="form-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-note">* Contact form integration coming soon. Reach me directly via email or LinkedIn.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="nav-logo-k">K</span><span class="nav-logo-p">P</span>
+          </div>
+          <div class="footer-name">KAMALESHWARAN P</div>
+          <div class="footer-tagline">Mechanical Engineer · Design Specialist · Patent Co-Inventor</div>
+          <div class="footer-socials">
+            <a href="https://linkedin.com/in/kamaleshwaran-p" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Kamaleshwaran-badboy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:kamaleshwaranperumal07@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+917397583709" aria-label="Phone"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-links-col">
+            <div class="footer-links-title">Navigation</div>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#expertise">Expertise</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#leadership">Leadership</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <div class="footer-links-title">Work</div>
+            <ul>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#patents">Patents</a></li>
+              <li><a href="#research">Research</a></li>
+              <li><a href="#achievements">Achievements</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <div class="footer-links-title">Connect</div>
+            <ul>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="resume.pdf" download>Resume</a></li>
+              <li><a href="https://linkedin.com/in/kamaleshwaran-p" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/Kamaleshwaran-badboy" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 Kamaleshwaran P. All rights reserved.</div>
+        <div class="footer-made">Designed & Built with <span class="gold-text">precision</span> · Coimbatore, India</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- PROJECT MODAL -->
+  <!-- ============================================================ -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeProjectModal()"></div>
+  <div class="project-modal" id="project-modal">
+    <button class="modal-close" onclick="closeProjectModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- BACK TO TOP -->
+  <!-- ============================================================ -->
+  <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
