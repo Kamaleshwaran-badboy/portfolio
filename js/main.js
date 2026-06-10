@@ -89,11 +89,66 @@ const projectData = [
     title: 'Virtual Site Development — SRIT Campus Digital Platform',
     category: 'Web Development · Virtual Experience',
     tags: ['HTML5', 'CSS3', 'Virtual Tour', 'Web Development', 'SRIT'],
-    problem: 'SRIT needed a digital campus experience platform for institutional outreach, remote student orientation, and online campus promotion — a virtual equivalent of physically visiting the campus.',
-    solution: 'Developed a full virtual site project for SRIT campus using HTML5 and CSS3 during internship training. Designed navigation flow, multimedia integration, and virtual visualization — delivering a fully navigable digital campus experience for institutional digital outreach and campus promotion.',
+    problem: 'SRIT needed a digital campus experience platform for institutional outreach, remote student orientation, and online campus promotion.',
+    solution: 'Developed a full virtual site project for SRIT campus using HTML5 and CSS3. Designed navigation flow, multimedia integration, and virtual visualization — delivering a fully navigable digital campus experience.',
     tech: ['HTML5', 'CSS3', 'Virtual Visualization', 'Navigation Flow Design', 'Multimedia Integration', 'UI/UX Design'],
     results: ['Delivered functional digital campus platform', 'Interactive navigation with multimedia integration', 'Applied real-world project management skills', 'Institutional deployment for SRIT digital outreach'],
     scope: 'Upgrade to 3D WebGL virtual tours, integrate 360° photography, add AR wayfinding, and develop mobile app version for prospective students.',
+  },
+  {
+    id: 8,
+    title: 'AI-Powered Laser QR Code Marking & Monitoring System',
+    category: 'AI & Computer Vision · Embedded Systems · Indian Railways',
+    tags: ['AI', 'Computer Vision', 'Laser Marking', 'QR Code', 'Indian Railways', 'IoT', 'Quality Monitoring'],
+    problem: 'Manual QR code marking and monitoring for railway components is slow, inconsistent, and not scalable. A fully automated AI-driven pipeline was needed for precise laser marking and real-time quality validation.',
+    solution: 'Developed an AI-powered system integrating laser marking hardware with computer vision for automated QR code generation, precise laser etching, and real-time monitoring of marking quality — ensuring zero-defect output for Indian Railways components.',
+    tech: ['Computer Vision', 'OpenCV', 'AI / Deep Learning', 'Laser Hardware Integration', 'IoT', 'Real-Time Processing', 'Embedded Systems'],
+    results: ['Automated QR code laser marking pipeline', 'Real-time AI quality validation', 'Designed for Indian Railways component tracking', 'Significantly reduced human error in marking process'],
+    scope: 'Scale to full production line integration, add multi-format marking support, integrate with Railway ERP/tracking systems.',
+  },
+  {
+    id: 9,
+    title: 'Autonomous Rover Navigation — Caterpillar Autonomy Challenge',
+    category: 'AI & Robotics · Embedded Systems · Competition',
+    tags: ['SLAM', 'Monocular Vision', 'Autonomous Navigation', 'Caterpillar Challenge', 'IIT Madras', 'Semi-Finalist', 'Shaastra 2026'],
+    problem: 'The Caterpillar Autonomy Challenge required fully autonomous rover navigation in unstructured outdoor environments — demanding tight integration of perception, mapping, and motion planning without GPS.',
+    solution: 'Engineered complete autonomous navigation system using SLAM (Simultaneous Localization and Mapping) and monocular computer vision. Integrated mechanical design, embedded firmware, sensor fusion, and navigation software for full system autonomy. Qualified as Semi-Finalist at Shaastra, IIT Madras (January 2026).',
+    tech: ['SLAM', 'Monocular Vision (OpenCV)', 'Embedded C Firmware', 'Sensor Fusion (IMU + Camera)', 'Motor Control', 'SolidWorks (Mechanical Design)', 'ROS-compatible Architecture'],
+    results: ['Semi-Finalist — Caterpillar Autonomy Challenge, IIT Madras (Jan 2026)', 'Full autonomous navigation in unstructured environments', 'SLAM + monocular vision pipeline developed', 'Complete mechanical-software integrated system'],
+    scope: 'Add stereo vision for improved depth estimation, integrate GPS-denied localization for industrial environments, and compete at international robotics competitions.',
+  },
+  {
+    id: 10,
+    title: 'AI for Assembly — TN-IMPACT Competition',
+    category: 'AI & Computer Vision · Industry 4.0',
+    tags: ['AI', 'Assembly Intelligence', 'Machine Vision', 'TN-IMPACT', 'Industry 4.0', 'Error Detection'],
+    problem: 'Assembly line errors in manufacturing cause costly rework, safety incidents, and quality escapes. Manual inspection cannot scale to high-throughput production.',
+    solution: 'Developed an AI-powered assembly intelligence system for the TN-IMPACT competition that uses machine vision to automatically verify assembly steps, detect errors in real-time, and guide operators through correct assembly sequences.',
+    tech: ['Computer Vision', 'AI / ML', 'OpenCV', 'Real-Time Processing', 'Embedded Integration', 'Industrial UI'],
+    results: ['Competed at TN-IMPACT state-level competition', 'Automated assembly verification pipeline', 'Real-time error detection and operator guidance', 'Demonstrated Industry 4.0 readiness'],
+    scope: 'Integrate with AR overlays for operator guidance, connect to MES systems, scale to multi-station assembly monitoring.',
+  },
+  {
+    id: 11,
+    title: 'Hospital Management Website',
+    category: 'Full Stack Web Development',
+    tags: ['HTML5', 'CSS3', 'Web Development', 'Hospital Management', 'ZyvOne Technologies', 'Internship'],
+    problem: 'Healthcare institutions needed a clean, functional web platform for patient management, appointment scheduling, and department navigation.',
+    solution: 'Built a comprehensive hospital management website during ZyvOne Technologies internship. Implemented patient flow navigation, appointment booking UI, department listings, doctor profiles, and emergency contacts — with a clean, professional responsive design.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'UI/UX Design', 'Form Handling'],
+    results: ['Fully functional hospital management website delivered', 'Professional UI with complete patient navigation flows', 'Responsive across all device sizes', 'Delivered as ZyvOne Technologies internship project'],
+    scope: 'Integrate with backend APIs for real appointment booking, add patient portal login, and connect to hospital information systems.',
+  },
+  {
+    id: 12,
+    title: 'Jhumka E-Commerce Website',
+    category: 'Full Stack Web Development · E-Commerce',
+    tags: ['HTML5', 'CSS3', 'E-Commerce', 'Fashion', 'Traditional Jewellery', 'ZyvOne Technologies', 'Internship'],
+    problem: 'Traditional jewellery brands needed a modern, aesthetically appealing e-commerce platform to reach online customers and showcase their product catalogue.',
+    solution: 'Designed and built a full fashion e-commerce website for traditional Jhumka jewellery during ZyvOne Technologies internship. Product catalogue, filtering, shopping cart flow, responsive design, and polished product photography layout.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'E-Commerce UI/UX', 'Product Grid Design'],
+    results: ['Complete e-commerce platform with product catalogue', 'Responsive design across all devices', 'Shopping and navigation flow fully implemented', 'Professional fashion brand aesthetic delivered'],
+    scope: 'Integrate with payment gateways, add inventory management backend, build mobile app version, and connect to WhatsApp ordering flow.',
   },
 ];
 
@@ -112,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilter();
   initBackToTop();
   initSmoothScrollLinks();
+  initCertificates();
 });
 
 /* ── LOADING SCREEN ──────────────────────────────────────────── */
@@ -120,8 +176,18 @@ function initLoadingScreen() {
   const bar     = document.getElementById('loading-bar');
   const percent = document.getElementById('loading-percent');
   const canvas  = document.getElementById('loading-canvas');
+  const titleEl = document.getElementById('loading-identities');
 
   if (!screen) return;
+
+  // Static single-line identity display — no rotation
+  if (titleEl) {
+    titleEl.style.opacity = '0';
+    setTimeout(() => {
+      titleEl.style.transition = 'opacity 0.6s ease';
+      titleEl.style.opacity = '1';
+    }, 300);
+  }
 
   // Particle canvas on loading screen
   const ctx  = canvas.getContext('2d');
@@ -166,7 +232,9 @@ function initLoadingScreen() {
       clearInterval(interval);
       setTimeout(() => {
         cancelAnimationFrame(rafId);
+        if (screen._titleInterval) clearInterval(screen._titleInterval);
         screen.classList.add('hidden');
+        document.body.classList.remove('loading-active');
         document.body.classList.add('loaded');
         // Trigger hero animations
         document.querySelectorAll('#hero .reveal-up').forEach((el, i) => {
@@ -176,7 +244,8 @@ function initLoadingScreen() {
     }
   }, 40);
 
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('loading-active');
+  document.body.style.overflow = '';
 }
 
 /* ── THEME TOGGLE ────────────────────────────────────────────── */
@@ -232,8 +301,8 @@ function initMobileDrawer() {
   const overlay   = document.getElementById('drawer-overlay');
   const closeBtn  = document.getElementById('drawer-close');
 
-  function open()  { drawer.classList.add('open'); overlay.classList.add('active'); hamburger.classList.add('open'); document.body.style.overflowY = 'hidden'; }
-  function close() { drawer.classList.remove('open'); overlay.classList.remove('active'); hamburger.classList.remove('open'); document.body.style.overflowY = ''; }
+  function open()  { drawer.classList.add('open'); overlay.classList.add('active'); hamburger.classList.add('open'); document.body.classList.add('loading-active'); }
+  function close() { drawer.classList.remove('open'); overlay.classList.remove('active'); hamburger.classList.remove('open'); document.body.classList.remove('loading-active'); }
 
   hamburger && hamburger.addEventListener('click', () => drawer.classList.contains('open') ? close() : open());
   closeBtn  && closeBtn.addEventListener('click', close);
@@ -360,12 +429,15 @@ function initTypewriter() {
   if (!el) return;
 
   const strings = [
-    'Mechanical Design Engineer',
+    'Mechanical Engineer',
+    'AI Developer',
+    'Full Stack Developer',
+    'Product Builder',
+    'Embedded Systems Developer',
+    'Engineering Innovator',
+    'Technical Leader',
     'Patent Co-Inventor',
-    'Motorsport Engineer',
-    'Product Developer',
-    'Technology Innovator',
-    'CAD & FEA Specialist',
+    'Computer Vision Builder',
   ];
 
   let si = 0, ci = 0, deleting = false;
@@ -513,8 +585,8 @@ function initProjectFilter() {
       const filter = btn.dataset.filter;
 
       cards.forEach((card, i) => {
-        const cat = card.dataset.category;
-        const show = filter === 'all' || cat === filter;
+        const cats = (card.dataset.category || '').split(/\s+/);
+        const show = filter === 'all' || cats.includes(filter);
         if (show) {
           card.style.display = '';
           card.style.opacity = '0';
@@ -751,4 +823,193 @@ if (reducedMotion.matches) {
   document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
     el.classList.add('visible');
   });
+}
+
+/* ── CERTIFICATE DATA ────────────────────────────────────────── */
+const certificatesData = [
+  // Technical Certifications
+  { id: 1, title: 'MATLAB Onramp', org: 'MathWorks', date: '2024', category: 'technical', icon: 'fas fa-square-root-alt', level: 'Certified', description: 'Official MATLAB programming certification from MathWorks.', image: 'certificates/images/cert-01.png' },
+  { id: 2, title: 'Simulink Onramp', org: 'MathWorks', date: '2024', category: 'technical', icon: 'fas fa-project-diagram', level: 'Certified', description: 'Official Simulink model-based design certification.', image: 'certificates/images/cert-02.png' },
+  { id: 3, title: 'Innovations in Automation & Machine Vision', org: 'Industry Training', date: '2024', category: 'technical', icon: 'fas fa-eye', level: 'Completed', description: 'Training on automation systems and machine vision technologies.', image: 'certificates/images/cert-03.png' },
+  { id: 4, title: 'Neural Networks & AI Model Creation', org: 'AI Training Program', date: '2024', category: 'technical', icon: 'fas fa-brain', level: 'Completed', description: 'Hands-on training in neural network architecture and AI model development.', image: 'certificates/images/cert-04.png' },
+  { id: 5, title: 'Innovating with GraphRAG', org: 'AI Program', date: '2025', category: 'technical', icon: 'fas fa-network-wired', level: 'Completed', description: 'Advanced AI training on Graph Retrieval Augmented Generation.', image: 'certificates/images/cert-05.png' },
+  { id: 6, title: 'Welding Engineering Certification', org: 'SRIT / Industry', date: '2024', category: 'technical', icon: 'fas fa-tools', level: 'Certified', description: 'Practical welding engineering and fabrication certification.', image: 'certificates/images/cert-06.png' },
+  { id: 7, title: 'Event Management Certification', org: 'SRIT', date: '2024', category: 'technical', icon: 'fas fa-calendar-check', level: 'Certified', description: 'Professional event management and coordination certification.', image: 'certificates/images/cert-07.png' },
+  { id: 8, title: 'Sales & Marketing Certification', org: 'Training Institute', date: '2024', category: 'technical', icon: 'fas fa-chart-line', level: 'Certified', description: 'Sales strategy and digital marketing certification.', image: 'certificates/images/cert-08.png' },
+  { id: 9, title: 'Learnathon', org: 'SRIT', date: '2024', category: 'technical', icon: 'fas fa-graduation-cap', level: 'Completed', description: 'Intensive learning marathon covering multiple engineering disciplines.', image: 'certificates/images/cert-09.png' },
+  // Internships
+  { id: 10, title: 'Mechanical Engineering Internship', org: 'Sri Jayasurya Engineering', date: '2026', category: 'internship', icon: 'fas fa-industry', level: 'Internship', description: 'Robotic arm development, kinematic design, quality inspection in live manufacturing.', image: 'certificates/images/cert-10.png' },
+  { id: 11, title: 'Web Development Internship', org: 'ZyvOne Technologies', date: '2026', category: 'internship', icon: 'fas fa-code', level: 'Internship', description: 'Built hospital management website and Jhumka e-commerce platform.', image: 'certificates/images/cert-11.png' },
+  { id: 12, title: 'Virtual Campus Development', org: 'SRIT / Training', date: '2024', category: 'internship', icon: 'fas fa-globe', level: 'Internship', description: 'Developed virtual campus platform for SRIT using HTML5 and CSS3.', image: 'certificates/images/cert-12.png' },
+  // Conferences
+  { id: 13, title: 'Pebble Bed Heat Exchanger — Conference Paper', org: 'Dr. NGP Institute of Technology', date: '2025', category: 'conference', icon: 'fas fa-fire', level: 'National', description: 'National Conference on Ghost Manufacturing & Digital Supply Chain for Viksit Bharat 2047.', image: 'certificates/images/cert-13.png' },
+  { id: 14, title: 'Shell & Tube Heat Exchanger — Published Paper', org: 'SRM Institute of Technology', date: '2025', category: 'conference', icon: 'fas fa-sun', level: 'National · Published', description: 'Published conference paper on shell and tube heat exchanger with parabolic solar collector.', image: 'certificates/images/cert-14.png' },
+  { id: 15, title: 'FORSCH 2025 — Paper Presentation', org: 'Anna University Regional Campus', date: '2025', category: 'conference', icon: 'fas fa-scroll', level: 'University', description: 'University-level research paper presentation at FORSCH 2025.', image: 'certificates/images/cert-15.png' },
+  { id: 16, title: 'Engineers Day — Technical Paper Presentation', org: 'SRIT', date: '2024', category: 'conference', icon: 'fas fa-award', level: 'Institutional', description: 'Technical paper presented on Engineers Day at SRIT.', image: 'certificates/images/cert-16.png' },
+  // Competitions
+  { id: 17, title: 'Smart India Hackathon — Internal 1st Place', org: 'SRIT / SIH', date: '2025', category: 'competition', icon: 'fas fa-trophy', level: 'National', description: 'Won 1st Place in SIH internal round, advancing team to national stage.', image: 'certificates/images/cert-17.png' },
+  { id: 18, title: 'Caterpillar Autonomy Challenge — Semi-Finalist', org: 'IIT Madras Shaastra', date: '2026', category: 'competition', icon: 'fas fa-robot', level: 'National Semi-Finalist', description: 'Autonomous rover navigation challenge at IIT Madras (Jan 2026).', image: 'certificates/images/cert-18.png' },
+  { id: 19, title: 'TN-IMPACT — AI for Assembly', org: 'Tamil Nadu IMPACT', date: '2025', category: 'competition', icon: 'fas fa-industry', level: 'State', description: 'AI-powered assembly intelligence competition.', image: 'certificates/images/cert-19.png' },
+  { id: 20, title: 'SAE Bicycle Design Challenge', org: 'SAE India', date: '2025', category: 'competition', icon: 'fas fa-bicycle', level: 'National', description: 'Designed and presented innovative bicycle concept to SAE India.', image: 'certificates/images/cert-20.png' },
+  { id: 21, title: 'MSME Idea Hackathon — Finalist', org: 'MSME / Government of India', date: '2025', category: 'competition', icon: 'fas fa-lightbulb', level: 'National Finalist', description: 'National MSME hackathon finalist for innovative engineering solutions.', image: 'certificates/images/cert-21.png' },
+  { id: 22, title: 'Pivot Challenge — Finalist', org: 'Entrepreneurship Cell', date: '2025', category: 'competition', icon: 'fas fa-sync', level: 'National Finalist', description: 'National-level startup pivot challenge finalist.', image: 'certificates/images/cert-22.png' },
+  { id: 23, title: 'Statathon — Finalist', org: 'Analytics Competition', date: '2025', category: 'competition', icon: 'fas fa-chart-bar', level: 'National Finalist', description: 'National-level data analytics competition finalist.', image: 'certificates/images/cert-23.png' },
+  // Leadership
+  { id: 24, title: 'ASME Design Head — Certificate', org: 'ASME SRIT Chapter', date: '2023', category: 'leadership', icon: 'fas fa-drafting-compass', level: 'Leadership', description: 'Official appointment as Design Head of ASME SRIT Student Section.', image: 'certificates/images/cert-24.png' },
+  { id: 25, title: 'SAE Membership', org: 'SAE India', date: '2023', category: 'leadership', icon: 'fas fa-car', level: 'Member', description: 'Active member of Society of Automotive Engineers India Chapter.', image: 'certificates/images/cert-25.png' },
+  { id: 26, title: 'Rotaract International Service Director', org: 'Rotaract International — SRIT', date: '2023', category: 'leadership', icon: 'fas fa-globe', level: 'Director', description: 'International Service Director, Rotaract SRIT Chapter.', image: 'certificates/images/cert-26.png' },
+  { id: 27, title: 'HIVE Innovation Ambassador', org: 'HIVE — SRIT', date: '2023', category: 'leadership', icon: 'fas fa-lightbulb', level: 'Ambassador', description: 'Innovation Ambassador at HIVE entrepreneurship cell, SRIT.', image: 'certificates/images/cert-27.png' },
+  { id: 28, title: 'IIC Membership', org: 'IIC — SRIT', date: '2023', category: 'leadership', icon: 'fas fa-university', level: 'Member', description: 'Member of Institution Innovation Council, SRIT.', image: 'certificates/images/cert-28.png' },
+  { id: 29, title: 'Tamil Nadu Karting Championship — Title Certificate', org: 'Tamil Nadu Karting Association', date: '2024', category: 'competition', icon: 'fas fa-flag-checkered', level: 'State Champion', description: 'Title victory certificate — Tamil Nadu Karting Championship Season 02.', image: 'certificates/images/cert-29.png' },
+  { id: 30, title: 'State Weightlifting Championship', org: 'Tamil Nadu Weightlifting Association', date: '2024', category: 'competition', icon: 'fas fa-dumbbell', level: '2× State Champion', description: 'Open State Weightlifting Champion — 60 kg category.', image: 'certificates/images/cert-30.png' },
+  // Additional certificates extracted from PDF
+  { id: 31, title: 'Certificate #31', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-31.png' },
+  { id: 32, title: 'Certificate #32', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-32.png' },
+  { id: 33, title: 'Certificate #33', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-33.png' },
+  { id: 34, title: 'Certificate #34', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-34.png' },
+  { id: 35, title: 'Certificate #35', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-35.png' },
+  { id: 36, title: 'Certificate #36', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-36.png' },
+  { id: 37, title: 'Certificate #37', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-37.png' },
+  { id: 38, title: 'Certificate #38', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-38.png' },
+  { id: 39, title: 'Certificate #39', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-39.png' },
+  { id: 40, title: 'Certificate #40', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-40.png' },
+  { id: 41, title: 'Certificate #41', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-41.png' },
+  { id: 42, title: 'Certificate #42', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-42.png' },
+  { id: 43, title: 'Certificate #43', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-43.png' },
+  { id: 44, title: 'Certificate #44', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-44.png' },
+  { id: 45, title: 'Certificate #45', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-45.png' },
+  { id: 46, title: 'Certificate #46', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-46.png' },
+  { id: 47, title: 'Certificate #47', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-47.png' },
+  { id: 48, title: 'Certificate #48', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-48.png' },
+  { id: 49, title: 'Certificate #49', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-49.png' },
+  { id: 50, title: 'Certificate #50', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-50.png' },
+  { id: 51, title: 'Certificate #51', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-51.png' },
+  { id: 52, title: 'Certificate #52', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-52.png' },
+  { id: 53, title: 'Certificate #53', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-53.png' },
+  { id: 54, title: 'Certificate #54', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-54.png' },
+  { id: 55, title: 'Certificate #55', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-55.png' },
+  { id: 56, title: 'Certificate #56', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-56.png' },
+  { id: 57, title: 'Certificate #57', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-57.png' },
+  { id: 58, title: 'Certificate #58', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-58.png' },
+  { id: 59, title: 'Certificate #59', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-59.png' },
+  { id: 60, title: 'Certificate #60', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-60.png' },
+  { id: 61, title: 'Certificate #61', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-61.png' },
+];
+
+/* ── CERTIFICATE SYSTEM ──────────────────────────────────────── */
+function initCertificates() {
+  renderCertPreview('all');
+  renderCertModal('all');
+
+  // Filter buttons (main page)
+  document.querySelectorAll('.cert-filter-btn[data-cert-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cert-filter-btn[data-cert-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderCertPreview(btn.dataset.certFilter);
+    });
+  });
+
+  // Filter buttons (modal)
+  document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderCertModal(); // reads active filter + search input
+    });
+  });
+}
+
+function renderCertPreview(filter) {
+  const grid = document.getElementById('cert-preview-grid');
+  if (!grid) return;
+
+  const certs = filter === 'all' ? certificatesData : certificatesData.filter(c => c.category === filter);
+  const preview = certs.slice(0, 8); // show max 8 thumbnails
+
+  grid.innerHTML = preview.map(cert => `
+    <div class="cert-thumb" onclick="openCertModal()">
+      ${cert.image
+        ? `<div class="cert-thumb-img-wrap"><img src="${cert.image}" alt="${cert.title}" class="cert-thumb-img" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'cert-thumb-icon\\'><i class=\\"${cert.icon}\\"></i></div>'"/></div>`
+        : `<div class="cert-thumb-icon"><i class="${cert.icon}"></i></div>`}
+      <div class="cert-thumb-name">${cert.title}</div>
+      <div class="cert-thumb-org">${cert.org}</div>
+    </div>
+  `).join('');
+
+  // Update count display
+  const countEl = document.getElementById('cert-total-count');
+  if (countEl) countEl.textContent = certificatesData.length + '+';
+}
+
+function renderCertModal(filter) {
+  const grid = document.getElementById('cert-modal-grid');
+  if (!grid) return;
+
+  // Read active filter from button if not passed
+  if (!filter) {
+    const activeBtn = document.querySelector('.cert-filter-btn[data-modal-filter].active');
+    filter = activeBtn ? activeBtn.dataset.modalFilter : 'all';
+  }
+
+  // Read search query
+  const searchInput = document.getElementById('cert-search-input');
+  const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+  let certs = filter === 'all' ? certificatesData : certificatesData.filter(c => c.category === filter);
+
+  // Apply search filter
+  if (query) {
+    certs = certs.filter(c =>
+      c.title.toLowerCase().includes(query) ||
+      c.org.toLowerCase().includes(query)
+    );
+  }
+
+  if (certs.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px 0;color:var(--text-muted);font-size:0.9rem;">No certificates found matching your search.</div>`;
+    return;
+  }
+
+  grid.innerHTML = certs.map(cert => `
+    <div class="cert-modal-card">
+      ${cert.image
+        ? `<div class="cert-modal-img-wrap"><img src="${cert.image}" alt="${cert.title}" class="cert-modal-img" loading="lazy" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'"/></div><div class="cert-modal-card-icon" style="display:none"><i class="${cert.icon}"></i></div>`
+        : `<div class="cert-modal-card-icon"><i class="${cert.icon}"></i></div>`}
+      <div class="cert-modal-card-title">${cert.title}</div>
+      <div class="cert-modal-card-org">${cert.org}</div>
+      <div class="cert-modal-card-meta">
+        <span><i class="fas fa-calendar" style="font-size:0.65rem;margin-right:3px"></i>${cert.date}</span>
+        <span>${cert.level}</span>
+      </div>
+      ${cert.description ? `<div class="cert-modal-card-desc">${cert.description}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function openCertModal() {
+  const overlay = document.getElementById('cert-modal-overlay');
+  if (overlay) {
+    // Reset search and filters
+    const searchInput = document.getElementById('cert-search-input');
+    if (searchInput) searchInput.value = '';
+    document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(b => b.classList.remove('active'));
+    const allBtn = document.querySelector('.cert-filter-btn[data-modal-filter="all"]');
+    if (allBtn) allBtn.classList.add('active');
+    renderCertModal();
+    overlay.classList.add('open');
+    document.body.style.overflowY = 'hidden';
+  }
+}
+
+function closeCertModal() {
+  const overlay = document.getElementById('cert-modal-overlay');
+  if (overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflowY = '';
+  }
+}
+
+function closeCertModalOutside(e) {
+  if (e.target === document.getElementById('cert-modal-overlay')) closeCertModal();
 }

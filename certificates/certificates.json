@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "MATLAB Onramp",
+    "org": "MathWorks",
+    "date": "2024",
+    "category": "technical",
+    "level": "Certified",
+    "description": "Official MATLAB programming certification from MathWorks.",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "title": "Simulink Onramp",
+    "org": "MathWorks",
+    "date": "2024",
+    "category": "technical",
+    "level": "Certified",
+    "description": "Official Simulink model-based design certification.",
+    "image": ""
+  },
+  {
+    "id": 10,
+    "title": "Mechanical Engineering Internship",
+    "org": "Sri Jayasurya Engineering",
+    "date": "2026",
+    "category": "internship",
+    "level": "Internship",
+    "description": "Robotic arm development, kinematic design, quality inspection.",
+    "image": ""
+  },
+  {
+    "id": 17,
+    "title": "Smart India Hackathon — Internal 1st Place",
+    "org": "SRIT / SIH",
+    "date": "2025",
+    "category": "competition",
+    "level": "National",
+    "description": "Won 1st Place in SIH internal round.",
+    "image": ""
+  },
+  {
+    "id": 18,
+    "title": "Caterpillar Autonomy Challenge — Semi-Finalist",
+    "org": "IIT Madras Shaastra",
+    "date": "2026",
+    "category": "competition",
+    "level": "National Semi-Finalist",
+    "description": "Autonomous rover navigation challenge at IIT Madras.",
+    "image": ""
+  }
+]
