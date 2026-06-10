@@ -899,9 +899,18 @@ const certificatesData = [
 /* ── CERTIFICATE SYSTEM ──────────────────────────────────────── */
 function initCertificates() {
   renderCertPreview('all');
+
+  // Build dynamic year filter buttons
+  const years = [...new Set(certificatesData.map(c => String(c.date)))].sort((a,b) => b - a);
+  const yearContainer = document.getElementById('cert-year-filters');
+  if (yearContainer) {
+    yearContainer.innerHTML = `<button class="cert-year-btn active" data-year="all">All Years</button>` +
+      years.map(y => `<button class="cert-year-btn" data-year="${y}">${y}</button>`).join('');
+  }
+
   renderCertModal('all');
 
-  // Filter buttons (main page)
+  // Filter buttons (main page - category)
   document.querySelectorAll('.cert-filter-btn[data-cert-filter]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.cert-filter-btn[data-cert-filter]').forEach(b => b.classList.remove('active'));
@@ -910,13 +919,23 @@ function initCertificates() {
     });
   });
 
-  // Filter buttons (modal)
+  // Filter buttons (modal - category)
   document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      renderCertModal(); // reads active filter + search input
+      renderCertModal();
     });
+  });
+
+  // Year filter buttons (delegated - built dynamically)
+  document.addEventListener('click', e => {
+    const yearBtn = e.target.closest('.cert-year-btn');
+    if (yearBtn) {
+      document.querySelectorAll('.cert-year-btn').forEach(b => b.classList.remove('active'));
+      yearBtn.classList.add('active');
+      renderCertModal();
+    }
   });
 }
 
@@ -924,16 +943,30 @@ function renderCertPreview(filter) {
   const grid = document.getElementById('cert-preview-grid');
   if (!grid) return;
 
+  const categoryLabelMap = {
+    technical: 'Technical',
+    competition: 'Competition',
+    internship: 'Internship',
+    conference: 'Conference',
+    leadership: 'Leadership'
+  };
+
   const certs = filter === 'all' ? certificatesData : certificatesData.filter(c => c.category === filter);
-  const preview = certs.slice(0, 8); // show max 8 thumbnails
+  // Show 6 most recent (highest date, then by id) as featured preview
+  const sorted = [...certs].sort((a, b) => (b.date - a.date) || (b.id - a.id));
+  const preview = sorted.slice(0, 6);
 
   grid.innerHTML = preview.map(cert => `
-    <div class="cert-thumb" onclick="openCertModal()">
-      ${cert.image
-        ? `<div class="cert-thumb-img-wrap"><img src="${cert.image}" alt="${cert.title}" class="cert-thumb-img" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'cert-thumb-icon\\'><i class=\\"${cert.icon}\\"></i></div>'"/></div>`
-        : `<div class="cert-thumb-icon"><i class="${cert.icon}"></i></div>`}
-      <div class="cert-thumb-name">${cert.title}</div>
-      <div class="cert-thumb-org">${cert.org}</div>
+    <div class="cert-card" onclick="openCertModal()" title="Click to view all certificates">
+      <div class="cert-card-top">
+        <span class="cert-card-category">${categoryLabelMap[cert.category] || cert.category}</span>
+        <span class="cert-card-date">${cert.date}</span>
+      </div>
+      <div class="cert-card-icon"><i class="${cert.icon}"></i></div>
+      <div class="cert-card-title">${cert.title}</div>
+      <div class="cert-card-org"><i class="fas fa-building" style="font-size:0.6rem;margin-right:4px;opacity:0.7"></i>${cert.org}</div>
+      ${cert.description ? `<div class="cert-card-desc">${cert.description}</div>` : ''}
+      <div class="cert-card-level"><span>${cert.level}</span></div>
     </div>
   `).join('');
 
@@ -946,17 +979,35 @@ function renderCertModal(filter) {
   const grid = document.getElementById('cert-modal-grid');
   if (!grid) return;
 
-  // Read active filter from button if not passed
+  // Read active category filter from button if not passed
   if (!filter) {
     const activeBtn = document.querySelector('.cert-filter-btn[data-modal-filter].active');
     filter = activeBtn ? activeBtn.dataset.modalFilter : 'all';
   }
+
+  // Read active year filter
+  const activeYearBtn = document.querySelector('.cert-year-btn.active');
+  const yearFilter = activeYearBtn ? activeYearBtn.dataset.year : 'all';
+
+  // Read active org filter
+  const activeOrgBtn = document.querySelector('.cert-org-btn.active');
+  const orgFilter = activeOrgBtn ? activeOrgBtn.dataset.org : 'all';
 
   // Read search query
   const searchInput = document.getElementById('cert-search-input');
   const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
   let certs = filter === 'all' ? certificatesData : certificatesData.filter(c => c.category === filter);
+
+  // Apply year filter
+  if (yearFilter !== 'all') {
+    certs = certs.filter(c => String(c.date) === yearFilter);
+  }
+
+  // Apply org filter
+  if (orgFilter !== 'all') {
+    certs = certs.filter(c => c.org === orgFilter);
+  }
 
   // Apply search filter
   if (query) {
@@ -966,8 +1017,12 @@ function renderCertModal(filter) {
     );
   }
 
+  // Update result count
+  const countEl = document.getElementById('cert-modal-result-count');
+  if (countEl) countEl.textContent = `${certs.length} certificate${certs.length !== 1 ? 's' : ''}`;
+
   if (certs.length === 0) {
-    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px 0;color:var(--text-muted);font-size:0.9rem;">No certificates found matching your search.</div>`;
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted);font-size:0.9rem;"><i class="fas fa-search" style="font-size:2rem;margin-bottom:12px;display:block;opacity:0.3"></i>No certificates found matching your filters.</div>`;
     return;
   }
 
@@ -996,6 +1051,9 @@ function openCertModal() {
     document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(b => b.classList.remove('active'));
     const allBtn = document.querySelector('.cert-filter-btn[data-modal-filter="all"]');
     if (allBtn) allBtn.classList.add('active');
+    document.querySelectorAll('.cert-year-btn').forEach(b => b.classList.remove('active'));
+    const allYearBtn = document.querySelector('.cert-year-btn[data-year="all"]');
+    if (allYearBtn) allYearBtn.classList.add('active');
     renderCertModal();
     overlay.classList.add('open');
     document.body.style.overflowY = 'hidden';

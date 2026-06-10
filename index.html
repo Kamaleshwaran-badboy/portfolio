@@ -1260,7 +1260,7 @@
         <button class="cert-filter-btn" data-cert-filter="leadership">Leadership</button>
       </div>
 
-      <div class="cert-preview-grid reveal-up" id="cert-preview-grid">
+      <div class="cert-cards-grid reveal-up" id="cert-preview-grid">
         <!-- Dynamically rendered via JS from certificatesData -->
       </div>
 
@@ -1283,13 +1283,21 @@
         <i class="fas fa-search cert-search-icon"></i>
         <input type="text" id="cert-search-input" class="cert-search-input" placeholder="Search by certificate name or organisation…" oninput="renderCertModal()" />
       </div>
-      <div class="cert-filters" style="margin-bottom:24px;" id="cert-modal-filters">
-        <button class="cert-filter-btn active" data-modal-filter="all">All</button>
-        <button class="cert-filter-btn" data-modal-filter="technical">Technical</button>
-        <button class="cert-filter-btn" data-modal-filter="competition">Competitions</button>
-        <button class="cert-filter-btn" data-modal-filter="internship">Internships</button>
-        <button class="cert-filter-btn" data-modal-filter="conference">Conferences</button>
-        <button class="cert-filter-btn" data-modal-filter="leadership">Leadership</button>
+      <div class="cert-modal-filter-row">
+        <div class="cert-filters" id="cert-modal-filters">
+          <button class="cert-filter-btn active" data-modal-filter="all">All</button>
+          <button class="cert-filter-btn" data-modal-filter="technical">Technical</button>
+          <button class="cert-filter-btn" data-modal-filter="competition">Competitions</button>
+          <button class="cert-filter-btn" data-modal-filter="internship">Internships</button>
+          <button class="cert-filter-btn" data-modal-filter="conference">Conferences</button>
+          <button class="cert-filter-btn" data-modal-filter="leadership">Leadership</button>
+        </div>
+        <div class="cert-year-filter-row" id="cert-year-filters">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+      <div class="cert-modal-results-bar">
+        <span id="cert-modal-result-count" class="cert-modal-result-count"></span>
       </div>
       <div class="cert-modal-grid" id="cert-modal-grid">
         <!-- Populated by JS -->
