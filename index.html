@@ -60,6 +60,7 @@
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#expertise" class="nav-link">Expertise</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#leadership" class="nav-link">Leadership</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#patents" class="nav-link">Patents</a></li>
         <li><a href="#achievements" class="nav-link">Achievements</a></li>
@@ -164,17 +165,18 @@
       <div class="about-grid">
         <div class="about-image-col reveal-left">
           <div class="about-image-wrap">
-            <div class="about-image-placeholder">
-              <i class="fas fa-user-circle"></i>
-              <span>Photo Coming Soon</span>
-            </div>
+            <img
+              src="images/profile.jpg"
+              alt="Kamaleshwaran P — Mechanical Engineer"
+              class="about-photo"
+            />
             <div class="about-image-border"></div>
             <div class="about-image-glow"></div>
           </div>
           <div class="about-info-chips">
             <div class="info-chip"><i class="fas fa-graduation-cap"></i> CGPA: 7.93 / 10</div>
             <div class="info-chip"><i class="fas fa-map-marker-alt"></i> Coimbatore, India</div>
-            <div class="info-chip"><i class="fas fa-birthday-cake"></i> Age: 18</div>
+            <div class="info-chip"><i class="fas fa-birthday-cake"></i> Age: 19</div>
             <div class="info-chip"><i class="fas fa-language"></i> English · Tamil</div>
           </div>
         </div>
@@ -199,7 +201,7 @@
               <div class="stat-label">State Championships</div>
             </div>
             <div class="stat-card">
-              <div class="stat-number" data-target="8">0</div>
+              <div class="stat-number" data-target="10">0</div>
               <div class="stat-label">Projects Built</div>
             </div>
             <div class="stat-card">
@@ -925,6 +927,33 @@
           </div>
         </div>
 
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2026</div>
+            <h3>Mechanical Engineering Intern — Sri Jayasurya Engineering</h3>
+            <p>Industrial internship focused on <strong>robotic arm development</strong>, kinematic linkage design, quality inspection processes, and dimensional tolerancing in a live manufacturing environment.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2026</div>
+            <h3>Web Development Intern — ZyvOne Technologies</h3>
+            <p>Built a <strong>hospital management website</strong> and a full fashion e-commerce platform for traditional jewellery. Applied HTML5, CSS3, responsive design, and agile delivery workflows.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2026</div>
+            <h3>Caterpillar Autonomy Challenge — Semi-Finalist, IIT Madras</h3>
+            <p>Engineered full autonomous navigation using <strong>SLAM and monocular vision</strong>. Qualified as Semi-Finalist at Shaastra, IIT Madras. Complete system integration across mechanical design, embedded control, and navigation software.</p>
+          </div>
+        </div>
+
         <div class="timeline-item reveal-left current">
           <div class="timeline-dot pulse-dot"></div>
           <div class="timeline-content">
@@ -1174,7 +1203,9 @@
   <!-- ============================================================ -->
   <div class="modal-overlay" id="modal-overlay" onclick="closeProjectModal()"></div>
   <div class="project-modal" id="project-modal">
-    <button class="modal-close" onclick="closeProjectModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-close-wrap">
+      <button class="modal-close" onclick="closeProjectModal()"><i class="fas fa-times"></i></button>
+    </div>
     <div class="modal-content" id="modal-content"></div>
   </div>
 

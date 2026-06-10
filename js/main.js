@@ -167,7 +167,7 @@ function initLoadingScreen() {
       setTimeout(() => {
         cancelAnimationFrame(rafId);
         screen.classList.add('hidden');
-        document.body.style.overflow = '';
+        document.body.classList.add('loaded');
         // Trigger hero animations
         document.querySelectorAll('#hero .reveal-up').forEach((el, i) => {
           setTimeout(() => el.classList.add('visible'), i * 120);
@@ -232,8 +232,8 @@ function initMobileDrawer() {
   const overlay   = document.getElementById('drawer-overlay');
   const closeBtn  = document.getElementById('drawer-close');
 
-  function open()  { drawer.classList.add('open'); overlay.classList.add('active'); hamburger.classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function close() { drawer.classList.remove('open'); overlay.classList.remove('active'); hamburger.classList.remove('open'); document.body.style.overflow = ''; }
+  function open()  { drawer.classList.add('open'); overlay.classList.add('active'); hamburger.classList.add('open'); document.body.style.overflowY = 'hidden'; }
+  function close() { drawer.classList.remove('open'); overlay.classList.remove('active'); hamburger.classList.remove('open'); document.body.style.overflowY = ''; }
 
   hamburger && hamburger.addEventListener('click', () => drawer.classList.contains('open') ? close() : open());
   closeBtn  && closeBtn.addEventListener('click', close);
@@ -572,7 +572,7 @@ function openProjectModal(id) {
 
   overlay.classList.add('active');
   modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflowY = 'hidden';
 }
 
 function closeProjectModal() {
@@ -580,7 +580,7 @@ function closeProjectModal() {
   const modal   = document.getElementById('project-modal');
   overlay.classList.remove('active');
   modal.classList.remove('active');
-  document.body.style.overflow = '';
+  document.body.style.overflowY = '';
 }
 
 // Close on Escape key
@@ -702,42 +702,14 @@ function handleFormSubmit(e) {
 
 /* ── NUMBERS TICKER ON ACHIEVEMENT SECTION ───────────────────── */
 (function initAchievementReveal() {
-  const section = document.getElementById('achievements');
-  if (!section) return;
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.achievement-card').forEach((card, i) => {
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, i * 80);
-        });
-      }
-    });
-  }, { threshold: 0.15 });
-  obs.observe(section);
+  // Achievement cards use the standard .reveal-up observer — no extra logic needed.
+  // This block intentionally left minimal to avoid conflicting with initRevealAnimations().
 })();
 
 /* ── TIMELINE LINE DRAW ──────────────────────────────────────── */
 (function initTimelineDraw() {
-  const timeline = document.querySelector('.timeline');
-  if (!timeline) return;
-  const line = timeline.querySelector('::before'); // CSS handles this
-  // Add progressive reveal for timeline items
-  const items = document.querySelectorAll('.timeline-item');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateX(0) translateY(0)';
-        }, 100);
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  items.forEach(item => obs.observe(item));
+  // Timeline items use .reveal-left / .reveal-right handled by initRevealAnimations().
+  // The ::before line is CSS-only. No DOM override needed.
 })();
 
 /* ── SECTION BACKGROUND GLOW ─────────────────────────────────── */
