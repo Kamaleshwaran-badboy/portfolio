@@ -825,92 +825,149 @@ if (reducedMotion.matches) {
   });
 }
 
-/* ── CERTIFICATE DATA ────────────────────────────────────────── */
-const certificatesData = [
-  // Technical Certifications
-  { id: 1, title: 'MATLAB Onramp', org: 'MathWorks', date: '2024', category: 'technical', icon: 'fas fa-square-root-alt', level: 'Certified', description: 'Official MATLAB programming certification from MathWorks.', image: 'certificates/images/cert-01.png' },
-  { id: 2, title: 'Simulink Onramp', org: 'MathWorks', date: '2024', category: 'technical', icon: 'fas fa-project-diagram', level: 'Certified', description: 'Official Simulink model-based design certification.', image: 'certificates/images/cert-02.png' },
-  { id: 3, title: 'Innovations in Automation & Machine Vision', org: 'Industry Training', date: '2024', category: 'technical', icon: 'fas fa-eye', level: 'Completed', description: 'Training on automation systems and machine vision technologies.', image: 'certificates/images/cert-03.png' },
-  { id: 4, title: 'Neural Networks & AI Model Creation', org: 'AI Training Program', date: '2024', category: 'technical', icon: 'fas fa-brain', level: 'Completed', description: 'Hands-on training in neural network architecture and AI model development.', image: 'certificates/images/cert-04.png' },
-  { id: 5, title: 'Innovating with GraphRAG', org: 'AI Program', date: '2025', category: 'technical', icon: 'fas fa-network-wired', level: 'Completed', description: 'Advanced AI training on Graph Retrieval Augmented Generation.', image: 'certificates/images/cert-05.png' },
-  { id: 6, title: 'Welding Engineering Certification', org: 'SRIT / Industry', date: '2024', category: 'technical', icon: 'fas fa-tools', level: 'Certified', description: 'Practical welding engineering and fabrication certification.', image: 'certificates/images/cert-06.png' },
-  { id: 7, title: 'Event Management Certification', org: 'SRIT', date: '2024', category: 'technical', icon: 'fas fa-calendar-check', level: 'Certified', description: 'Professional event management and coordination certification.', image: 'certificates/images/cert-07.png' },
-  { id: 8, title: 'Sales & Marketing Certification', org: 'Training Institute', date: '2024', category: 'technical', icon: 'fas fa-chart-line', level: 'Certified', description: 'Sales strategy and digital marketing certification.', image: 'certificates/images/cert-08.png' },
-  { id: 9, title: 'Learnathon', org: 'SRIT', date: '2024', category: 'technical', icon: 'fas fa-graduation-cap', level: 'Completed', description: 'Intensive learning marathon covering multiple engineering disciplines.', image: 'certificates/images/cert-09.png' },
-  // Internships
-  { id: 10, title: 'Mechanical Engineering Internship', org: 'Sri Jayasurya Engineering', date: '2026', category: 'internship', icon: 'fas fa-industry', level: 'Internship', description: 'Robotic arm development, kinematic design, quality inspection in live manufacturing.', image: 'certificates/images/cert-10.png' },
-  { id: 11, title: 'Web Development Internship', org: 'ZyvOne Technologies', date: '2026', category: 'internship', icon: 'fas fa-code', level: 'Internship', description: 'Built hospital management website and Jhumka e-commerce platform.', image: 'certificates/images/cert-11.png' },
-  { id: 12, title: 'Virtual Campus Development', org: 'SRIT / Training', date: '2024', category: 'internship', icon: 'fas fa-globe', level: 'Internship', description: 'Developed virtual campus platform for SRIT using HTML5 and CSS3.', image: 'certificates/images/cert-12.png' },
-  // Conferences
-  { id: 13, title: 'Pebble Bed Heat Exchanger — Conference Paper', org: 'Dr. NGP Institute of Technology', date: '2025', category: 'conference', icon: 'fas fa-fire', level: 'National', description: 'National Conference on Ghost Manufacturing & Digital Supply Chain for Viksit Bharat 2047.', image: 'certificates/images/cert-13.png' },
-  { id: 14, title: 'Shell & Tube Heat Exchanger — Published Paper', org: 'SRM Institute of Technology', date: '2025', category: 'conference', icon: 'fas fa-sun', level: 'National · Published', description: 'Published conference paper on shell and tube heat exchanger with parabolic solar collector.', image: 'certificates/images/cert-14.png' },
-  { id: 15, title: 'FORSCH 2025 — Paper Presentation', org: 'Anna University Regional Campus', date: '2025', category: 'conference', icon: 'fas fa-scroll', level: 'University', description: 'University-level research paper presentation at FORSCH 2025.', image: 'certificates/images/cert-15.png' },
-  { id: 16, title: 'Engineers Day — Technical Paper Presentation', org: 'SRIT', date: '2024', category: 'conference', icon: 'fas fa-award', level: 'Institutional', description: 'Technical paper presented on Engineers Day at SRIT.', image: 'certificates/images/cert-16.png' },
-  // Competitions
-  { id: 17, title: 'Smart India Hackathon — Internal 1st Place', org: 'SRIT / SIH', date: '2025', category: 'competition', icon: 'fas fa-trophy', level: 'National', description: 'Won 1st Place in SIH internal round, advancing team to national stage.', image: 'certificates/images/cert-17.png' },
-  { id: 18, title: 'Caterpillar Autonomy Challenge — Semi-Finalist', org: 'IIT Madras Shaastra', date: '2026', category: 'competition', icon: 'fas fa-robot', level: 'National Semi-Finalist', description: 'Autonomous rover navigation challenge at IIT Madras (Jan 2026).', image: 'certificates/images/cert-18.png' },
-  { id: 19, title: 'TN-IMPACT — AI for Assembly', org: 'Tamil Nadu IMPACT', date: '2025', category: 'competition', icon: 'fas fa-industry', level: 'State', description: 'AI-powered assembly intelligence competition.', image: 'certificates/images/cert-19.png' },
-  { id: 20, title: 'SAE Bicycle Design Challenge', org: 'SAE India', date: '2025', category: 'competition', icon: 'fas fa-bicycle', level: 'National', description: 'Designed and presented innovative bicycle concept to SAE India.', image: 'certificates/images/cert-20.png' },
-  { id: 21, title: 'MSME Idea Hackathon — Finalist', org: 'MSME / Government of India', date: '2025', category: 'competition', icon: 'fas fa-lightbulb', level: 'National Finalist', description: 'National MSME hackathon finalist for innovative engineering solutions.', image: 'certificates/images/cert-21.png' },
-  { id: 22, title: 'Pivot Challenge — Finalist', org: 'Entrepreneurship Cell', date: '2025', category: 'competition', icon: 'fas fa-sync', level: 'National Finalist', description: 'National-level startup pivot challenge finalist.', image: 'certificates/images/cert-22.png' },
-  { id: 23, title: 'Statathon — Finalist', org: 'Analytics Competition', date: '2025', category: 'competition', icon: 'fas fa-chart-bar', level: 'National Finalist', description: 'National-level data analytics competition finalist.', image: 'certificates/images/cert-23.png' },
-  // Leadership
-  { id: 24, title: 'ASME Design Head — Certificate', org: 'ASME SRIT Chapter', date: '2023', category: 'leadership', icon: 'fas fa-drafting-compass', level: 'Leadership', description: 'Official appointment as Design Head of ASME SRIT Student Section.', image: 'certificates/images/cert-24.png' },
-  { id: 25, title: 'SAE Membership', org: 'SAE India', date: '2023', category: 'leadership', icon: 'fas fa-car', level: 'Member', description: 'Active member of Society of Automotive Engineers India Chapter.', image: 'certificates/images/cert-25.png' },
-  { id: 26, title: 'Rotaract International Service Director', org: 'Rotaract International — SRIT', date: '2023', category: 'leadership', icon: 'fas fa-globe', level: 'Director', description: 'International Service Director, Rotaract SRIT Chapter.', image: 'certificates/images/cert-26.png' },
-  { id: 27, title: 'HIVE Innovation Ambassador', org: 'HIVE — SRIT', date: '2023', category: 'leadership', icon: 'fas fa-lightbulb', level: 'Ambassador', description: 'Innovation Ambassador at HIVE entrepreneurship cell, SRIT.', image: 'certificates/images/cert-27.png' },
-  { id: 28, title: 'IIC Membership', org: 'IIC — SRIT', date: '2023', category: 'leadership', icon: 'fas fa-university', level: 'Member', description: 'Member of Institution Innovation Council, SRIT.', image: 'certificates/images/cert-28.png' },
-  { id: 29, title: 'Tamil Nadu Karting Championship — Title Certificate', org: 'Tamil Nadu Karting Association', date: '2024', category: 'competition', icon: 'fas fa-flag-checkered', level: 'State Champion', description: 'Title victory certificate — Tamil Nadu Karting Championship Season 02.', image: 'certificates/images/cert-29.png' },
-  { id: 30, title: 'State Weightlifting Championship', org: 'Tamil Nadu Weightlifting Association', date: '2024', category: 'competition', icon: 'fas fa-dumbbell', level: '2× State Champion', description: 'Open State Weightlifting Champion — 60 kg category.', image: 'certificates/images/cert-30.png' },
-  // Additional certificates extracted from PDF
-  { id: 31, title: 'Certificate #31', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-31.png' },
-  { id: 32, title: 'Certificate #32', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-32.png' },
-  { id: 33, title: 'Certificate #33', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-33.png' },
-  { id: 34, title: 'Certificate #34', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-34.png' },
-  { id: 35, title: 'Certificate #35', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-35.png' },
-  { id: 36, title: 'Certificate #36', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-36.png' },
-  { id: 37, title: 'Certificate #37', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-37.png' },
-  { id: 38, title: 'Certificate #38', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-38.png' },
-  { id: 39, title: 'Certificate #39', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-39.png' },
-  { id: 40, title: 'Certificate #40', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-40.png' },
-  { id: 41, title: 'Certificate #41', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-41.png' },
-  { id: 42, title: 'Certificate #42', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-42.png' },
-  { id: 43, title: 'Certificate #43', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-43.png' },
-  { id: 44, title: 'Certificate #44', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-44.png' },
-  { id: 45, title: 'Certificate #45', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-45.png' },
-  { id: 46, title: 'Certificate #46', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-46.png' },
-  { id: 47, title: 'Certificate #47', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-47.png' },
-  { id: 48, title: 'Certificate #48', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-48.png' },
-  { id: 49, title: 'Certificate #49', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-49.png' },
-  { id: 50, title: 'Certificate #50', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-50.png' },
-  { id: 51, title: 'Certificate #51', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-51.png' },
-  { id: 52, title: 'Certificate #52', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-52.png' },
-  { id: 53, title: 'Certificate #53', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-53.png' },
-  { id: 54, title: 'Certificate #54', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-54.png' },
-  { id: 55, title: 'Certificate #55', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-55.png' },
-  { id: 56, title: 'Certificate #56', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-56.png' },
-  { id: 57, title: 'Certificate #57', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-57.png' },
-  { id: 58, title: 'Certificate #58', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-58.png' },
-  { id: 59, title: 'Certificate #59', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-59.png' },
-  { id: 60, title: 'Certificate #60', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-60.png' },
-  { id: 61, title: 'Certificate #61', org: 'Achievement', date: '2024', category: 'technical', icon: 'fas fa-certificate', level: 'Certified', description: 'Certificate from portfolio archive.', image: 'certificates/images/cert-61.png' },
-];
 
-/* ── CERTIFICATE SYSTEM ──────────────────────────────────────── */
-function initCertificates() {
-  renderCertPreview('all');
+/* ================================================================
+   CERTIFICATE SYSTEM — FULLY DYNAMIC & FUTURE-PROOF
+   ================================================================
+   HOW TO ADD A NEW CERTIFICATE (zero code changes needed):
+   1. Add the image/PDF into  certificates/images/
+   2. Add one JSON entry to   certificates/certificates.json
+   3. git add . && git commit && git push — done.
 
-  // Build dynamic year filter buttons
-  const years = [...new Set(certificatesData.map(c => String(c.date)))].sort((a,b) => b - a);
-  const yearContainer = document.getElementById('cert-year-filters');
-  if (yearContainer) {
-    yearContainer.innerHTML = `<button class="cert-year-btn active" data-year="all">All Years</button>` +
-      years.map(y => `<button class="cert-year-btn" data-year="${y}">${y}</button>`).join('');
+   NAMING CONVENTION (auto-parsed if no JSON entry exists):
+     Org_Title_Words_YYYY.ext
+     e.g. Google_AI_Essentials_2026.png
+          → Title: "AI Essentials", Org: "Google", Year: 2026
+================================================================ */
+
+/* ── Global cert data store ──────────────────────────────────── */
+let certificatesData = [];
+
+/* ── CATEGORY ICON MAP ───────────────────────────────────────── */
+const CERT_ICONS = {
+  technical:   'fas fa-microchip',
+  competition: 'fas fa-trophy',
+  internship:  'fas fa-briefcase',
+  conference:  'fas fa-scroll',
+  leadership:  'fas fa-crown',
+  default:     'fas fa-certificate',
+};
+
+/* ── SMART FILENAME PARSER ───────────────────────────────────── */
+function parseCertFilename(filename) {
+  // Remove extension
+  const base = filename.replace(/\.[^.]+$/, '');
+  // Split on underscores
+  const parts = base.split('_').map(p => p.trim()).filter(Boolean);
+
+  // Last part that is a 4-digit year → date
+  let date = '';
+  let titleParts = [...parts];
+  const yearIdx = parts.map((p, i) => /^\d{4}$/.test(p) ? i : -1).filter(i => i >= 0).pop();
+  if (yearIdx !== undefined && yearIdx >= 0) {
+    date = parts[yearIdx];
+    titleParts.splice(yearIdx, 1);
   }
 
-  renderCertModal('all');
+  // First part is treated as org if >1 part remains
+  let org = 'Achievement';
+  let title = base.replace(/_/g, ' ');
+  if (titleParts.length >= 2) {
+    org = titleParts[0];
+    title = titleParts.slice(1).join(' ');
+  } else if (titleParts.length === 1) {
+    title = titleParts[0];
+  }
 
-  // Filter buttons (main page - category)
+  return {
+    title,
+    org,
+    date: date || 'N/A',
+    category: 'technical',
+    icon: CERT_ICONS.technical,
+    level: 'Certified',
+    description: 'Details coming soon.',
+    image: '',
+  };
+}
+
+/* ── DETECT FILE TYPE ────────────────────────────────────────── */
+function isCertPDF(imagePath) {
+  return /\.pdf$/i.test(imagePath || '');
+}
+
+/* ── LOAD CERTIFICATES (inline → fetch → merge) ─────────────── */
+function initCertificates() {
+  // Step 1: Try inline JSON first (always works, even on file://)
+  const inlineEl = document.getElementById('cert-data-inline');
+  if (inlineEl) {
+    try {
+      const parsed = JSON.parse(inlineEl.textContent);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        certificatesData = parsed;
+        _bootstrapCertificates();
+      }
+    } catch (e) {
+      console.warn('[Certificates] Inline JSON parse error:', e);
+    }
+  }
+
+  // Step 2: Also fetch live (picks up additions pushed to repo without page rebuild)
+  fetch('certificates/certificates.json?_=' + Math.floor(Date.now() / 60000))
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => {
+      if (!Array.isArray(data) || data.length === 0) return;
+      // Use fresh fetch data; merge any auto-detected extras from inline
+      const fetchIds = new Set(data.map(c => String(c.id || c.image)));
+      // Keep any inline-only entries (auto-detected) not in fetched data
+      const extras = certificatesData.filter(c => c._auto && !fetchIds.has(String(c.image)));
+      certificatesData = [...data, ...extras];
+      _bootstrapCertificates();
+    })
+    .catch(err => {
+      // Fetch failed (file:// protocol, network issue, etc.) — inline data is already loaded
+      console.info('[Certificates] Live fetch skipped:', err.message || err);
+    });
+}
+
+/* ── BOOTSTRAP UI after data is ready ───────────────────────── */
+function _bootstrapCertificates() {
+  // Sort by date desc, then id desc
+  certificatesData.sort((a, b) => {
+    const da = parseInt(b.date) || 0, db = parseInt(a.date) || 0;
+    if (da !== db) return da - db;
+    return (parseInt(b.id) || 0) - (parseInt(a.id) || 0);
+  });
+
+  // Remove duplicates (by image path or id)
+  const seen = new Set();
+  certificatesData = certificatesData.filter(c => {
+    const key = c.image || String(c.id);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  renderCertPreview('all');
+  _buildYearFilters();
+  renderCertModal('all');
+  _attachCertFilterListeners();
+  _buildImageLightbox();
+}
+
+/* ── YEAR FILTER BUILDER ─────────────────────────────────────── */
+function _buildYearFilters() {
+  const years = [...new Set(certificatesData.map(c => String(c.date)).filter(y => y && y !== 'N/A'))].sort((a,b) => b - a);
+  const container = document.getElementById('cert-year-filters');
+  if (!container) return;
+  container.innerHTML =
+    `<button class="cert-year-btn active" data-year="all">All Years</button>` +
+    years.map(y => `<button class="cert-year-btn" data-year="${y}">${y}</button>`).join('');
+}
+
+/* ── FILTER LISTENERS ────────────────────────────────────────── */
+function _attachCertFilterListeners() {
+  // Category filters — main preview
   document.querySelectorAll('.cert-filter-btn[data-cert-filter]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.cert-filter-btn[data-cert-filter]').forEach(b => b.classList.remove('active'));
@@ -919,7 +976,7 @@ function initCertificates() {
     });
   });
 
-  // Filter buttons (modal - category)
+  // Category filters — modal
   document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(b => b.classList.remove('active'));
@@ -928,146 +985,228 @@ function initCertificates() {
     });
   });
 
-  // Year filter buttons (delegated - built dynamically)
+  // Year filter (delegated — buttons are built dynamically)
   document.addEventListener('click', e => {
-    const yearBtn = e.target.closest('.cert-year-btn');
-    if (yearBtn) {
-      document.querySelectorAll('.cert-year-btn').forEach(b => b.classList.remove('active'));
-      yearBtn.classList.add('active');
-      renderCertModal();
-    }
+    const btn = e.target.closest('.cert-year-btn');
+    if (!btn) return;
+    document.querySelectorAll('.cert-year-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCertModal();
   });
 }
 
+/* ── CATEGORY LABEL MAP ──────────────────────────────────────── */
+const CAT_LABEL = {
+  technical:   'Technical',
+  competition: 'Competition',
+  internship:  'Internship',
+  conference:  'Conference',
+  leadership:  'Leadership',
+};
+
+/* ── RENDER HOMEPAGE PREVIEW (6 cards, newest first) ────────── */
 function renderCertPreview(filter) {
   const grid = document.getElementById('cert-preview-grid');
   if (!grid) return;
 
-  const categoryLabelMap = {
-    technical: 'Technical',
-    competition: 'Competition',
-    internship: 'Internship',
-    conference: 'Conference',
-    leadership: 'Leadership'
-  };
+  const all = filter === 'all' ? certificatesData : certificatesData.filter(c => c.category === filter);
+  const preview = all.slice(0, 6);   // already sorted newest-first
 
-  const certs = filter === 'all' ? certificatesData : certificatesData.filter(c => c.category === filter);
-  // Show 6 most recent (highest date, then by id) as featured preview
-  const sorted = [...certs].sort((a, b) => (b.date - a.date) || (b.id - a.id));
-  const preview = sorted.slice(0, 6);
-
-  grid.innerHTML = preview.map(cert => `
-    <div class="cert-card" onclick="openCertModal()" title="Click to view all certificates">
-      <div class="cert-card-top">
-        <span class="cert-card-category">${categoryLabelMap[cert.category] || cert.category}</span>
-        <span class="cert-card-date">${cert.date}</span>
+  if (preview.length === 0) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px 0;color:var(--text-muted);font-size:0.9rem;">No certificates in this category yet.</div>`;
+  } else {
+    grid.innerHTML = preview.map(cert => `
+      <div class="cert-card" onclick="openCertModal('${_escAttr(filter === 'all' ? 'all' : cert.category)}')" title="Click to view all certificates">
+        <div class="cert-card-top">
+          <span class="cert-card-category">${CAT_LABEL[cert.category] || cert.category || 'Certificate'}</span>
+          <span class="cert-card-date">${cert.date || ''}</span>
+        </div>
+        <div class="cert-card-icon"><i class="${cert.icon || CERT_ICONS[cert.category] || CERT_ICONS.default}"></i></div>
+        <div class="cert-card-title">${_esc(cert.title)}</div>
+        <div class="cert-card-org"><i class="fas fa-building" style="font-size:0.6rem;margin-right:4px;opacity:0.7"></i>${_esc(cert.org)}</div>
+        ${cert.description ? `<div class="cert-card-desc">${_esc(cert.description)}</div>` : ''}
+        <div class="cert-card-level"><span>${_esc(cert.level || 'Certified')}</span></div>
       </div>
-      <div class="cert-card-icon"><i class="${cert.icon}"></i></div>
-      <div class="cert-card-title">${cert.title}</div>
-      <div class="cert-card-org"><i class="fas fa-building" style="font-size:0.6rem;margin-right:4px;opacity:0.7"></i>${cert.org}</div>
-      ${cert.description ? `<div class="cert-card-desc">${cert.description}</div>` : ''}
-      <div class="cert-card-level"><span>${cert.level}</span></div>
-    </div>
-  `).join('');
+    `).join('');
+  }
 
-  // Update count display
+  // Update total count
   const countEl = document.getElementById('cert-total-count');
   if (countEl) countEl.textContent = certificatesData.length + '+';
 }
 
+/* ── RENDER MODAL GRID (all certs, filterable) ───────────────── */
 function renderCertModal(filter) {
   const grid = document.getElementById('cert-modal-grid');
   if (!grid) return;
 
-  // Read active category filter from button if not passed
+  // Resolve category filter
   if (!filter) {
     const activeBtn = document.querySelector('.cert-filter-btn[data-modal-filter].active');
     filter = activeBtn ? activeBtn.dataset.modalFilter : 'all';
   }
 
-  // Read active year filter
-  const activeYearBtn = document.querySelector('.cert-year-btn.active');
-  const yearFilter = activeYearBtn ? activeYearBtn.dataset.year : 'all';
+  // Year filter
+  const activeYear = (document.querySelector('.cert-year-btn.active') || {}).dataset?.year || 'all';
 
-  // Read active org filter
-  const activeOrgBtn = document.querySelector('.cert-org-btn.active');
-  const orgFilter = activeOrgBtn ? activeOrgBtn.dataset.org : 'all';
+  // Search query
+  const query = ((document.getElementById('cert-search-input') || {}).value || '').trim().toLowerCase();
 
-  // Read search query
-  const searchInput = document.getElementById('cert-search-input');
-  const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+  let certs = filter === 'all' ? [...certificatesData] : certificatesData.filter(c => c.category === filter);
 
-  let certs = filter === 'all' ? certificatesData : certificatesData.filter(c => c.category === filter);
+  if (activeYear !== 'all') certs = certs.filter(c => String(c.date) === activeYear);
+  if (query) certs = certs.filter(c =>
+    (c.title || '').toLowerCase().includes(query) ||
+    (c.org  || '').toLowerCase().includes(query) ||
+    (c.description || '').toLowerCase().includes(query)
+  );
 
-  // Apply year filter
-  if (yearFilter !== 'all') {
-    certs = certs.filter(c => String(c.date) === yearFilter);
-  }
-
-  // Apply org filter
-  if (orgFilter !== 'all') {
-    certs = certs.filter(c => c.org === orgFilter);
-  }
-
-  // Apply search filter
-  if (query) {
-    certs = certs.filter(c =>
-      c.title.toLowerCase().includes(query) ||
-      c.org.toLowerCase().includes(query)
-    );
-  }
-
-  // Update result count
+  // Result count
   const countEl = document.getElementById('cert-modal-result-count');
   if (countEl) countEl.textContent = `${certs.length} certificate${certs.length !== 1 ? 's' : ''}`;
 
   if (certs.length === 0) {
-    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted);font-size:0.9rem;"><i class="fas fa-search" style="font-size:2rem;margin-bottom:12px;display:block;opacity:0.3"></i>No certificates found matching your filters.</div>`;
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted);font-size:0.9rem;">
+      <i class="fas fa-search" style="font-size:2rem;margin-bottom:12px;display:block;opacity:0.3"></i>No certificates found.
+    </div>`;
     return;
   }
 
-  grid.innerHTML = certs.map(cert => `
-    <div class="cert-modal-card">
-      ${cert.image
-        ? `<div class="cert-modal-img-wrap"><img src="${cert.image}" alt="${cert.title}" class="cert-modal-img" loading="lazy" onerror="this.parentElement.style.display='none';this.parentElement.nextElementSibling.style.display='flex'"/></div><div class="cert-modal-card-icon" style="display:none"><i class="${cert.icon}"></i></div>`
-        : `<div class="cert-modal-card-icon"><i class="${cert.icon}"></i></div>`}
-      <div class="cert-modal-card-title">${cert.title}</div>
-      <div class="cert-modal-card-org">${cert.org}</div>
-      <div class="cert-modal-card-meta">
-        <span><i class="fas fa-calendar" style="font-size:0.65rem;margin-right:3px"></i>${cert.date}</span>
-        <span>${cert.level}</span>
-      </div>
-      ${cert.description ? `<div class="cert-modal-card-desc">${cert.description}</div>` : ''}
-    </div>
-  `).join('');
+  grid.innerHTML = certs.map(cert => _renderModalCard(cert)).join('');
 }
 
-function openCertModal() {
+/* ── BUILD ONE MODAL CARD ────────────────────────────────────── */
+function _renderModalCard(cert) {
+  const isPDF  = isCertPDF(cert.image);
+  const hasImg = cert.image && !isPDF;
+  const icon   = cert.icon || CERT_ICONS[cert.category] || CERT_ICONS.default;
+
+  const imageHtml = hasImg
+    ? `<div class="cert-modal-img-wrap" onclick="openCertLightbox('${_escAttr(cert.image)}','${_escAttr(cert.title)}')" title="Click to view full certificate">
+         <img src="${_escAttr(cert.image)}" alt="${_escAttr(cert.title)}" class="cert-modal-img" loading="lazy"
+              onerror="this.closest('.cert-modal-img-wrap').style.display='none';this.closest('.cert-modal-card').querySelector('.cert-modal-card-icon').style.display='flex'"/>
+         <div class="cert-img-zoom-hint"><i class="fas fa-expand-alt"></i> View</div>
+       </div>
+       <div class="cert-modal-card-icon" style="display:none"><i class="${icon}"></i></div>`
+    : isPDF
+      ? `<div class="cert-modal-pdf-wrap" onclick="openCertPDF('${_escAttr(cert.image)}','${_escAttr(cert.title)}')" title="Click to view PDF">
+           <i class="fas fa-file-pdf cert-pdf-icon"></i>
+           <span class="cert-pdf-label">PDF Certificate</span>
+           <div class="cert-img-zoom-hint"><i class="fas fa-external-link-alt"></i> Open</div>
+         </div>`
+      : `<div class="cert-modal-card-icon"><i class="${icon}"></i></div>`;
+
+  const downloadBtn = cert.image
+    ? `<a href="${_escAttr(cert.image)}" download class="cert-download-btn" title="Download certificate">
+         <i class="${isPDF ? 'fas fa-file-pdf' : 'fas fa-download'}"></i>
+       </a>`
+    : '';
+
+  return `
+    <div class="cert-modal-card" data-category="${_escAttr(cert.category || '')}">
+      ${imageHtml}
+      <div class="cert-modal-card-title">
+        ${_esc(cert.title)}
+        ${downloadBtn}
+      </div>
+      <div class="cert-modal-card-org">${_esc(cert.org)}</div>
+      <div class="cert-modal-card-meta">
+        <span><i class="fas fa-calendar" style="font-size:0.65rem;margin-right:3px"></i>${_esc(String(cert.date || ''))}</span>
+        <span>${_esc(cert.level || 'Certified')}</span>
+        <span class="cert-meta-cat">${CAT_LABEL[cert.category] || cert.category || ''}</span>
+      </div>
+      ${cert.description ? `<div class="cert-modal-card-desc">${_esc(cert.description)}</div>` : ''}
+    </div>`;
+}
+
+/* ── LIGHTBOX (fullscreen image viewer) ─────────────────────── */
+function _buildImageLightbox() {
+  if (document.getElementById('cert-lightbox')) return;
+  const lb = document.createElement('div');
+  lb.id = 'cert-lightbox';
+  lb.innerHTML = `
+    <div class="cert-lb-backdrop" onclick="closeCertLightbox()"></div>
+    <div class="cert-lb-inner">
+      <button class="cert-lb-close" onclick="closeCertLightbox()" aria-label="Close"><i class="fas fa-times"></i></button>
+      <img id="cert-lb-img" src="" alt="" class="cert-lb-img"/>
+      <div id="cert-lb-caption" class="cert-lb-caption"></div>
+      <a id="cert-lb-dl" href="#" download class="cert-lb-dl"><i class="fas fa-download"></i> Download</a>
+    </div>`;
+  document.body.appendChild(lb);
+
+  // Keyboard close
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeCertLightbox();
+  });
+}
+
+function openCertLightbox(src, title) {
+  const lb  = document.getElementById('cert-lightbox');
+  const img = document.getElementById('cert-lb-img');
+  const cap = document.getElementById('cert-lb-caption');
+  const dl  = document.getElementById('cert-lb-dl');
+  if (!lb || !img) return;
+  img.src      = src;
+  img.alt      = title;
+  if (cap) cap.textContent = title;
+  if (dl)  { dl.href = src; dl.download = title; }
+  lb.classList.add('open');
+  document.body.style.overflowY = 'hidden';
+}
+
+function closeCertLightbox() {
+  const lb = document.getElementById('cert-lightbox');
+  if (lb) lb.classList.remove('open');
+  document.body.style.overflowY = '';
+}
+
+function openCertPDF(src, title) {
+  // Open PDF in new tab (most reliable cross-browser approach)
+  window.open(src, '_blank', 'noopener,noreferrer');
+}
+
+/* ── OPEN / CLOSE CERT MODAL ─────────────────────────────────── */
+function openCertModal(prefilter) {
   const overlay = document.getElementById('cert-modal-overlay');
-  if (overlay) {
-    // Reset search and filters
-    const searchInput = document.getElementById('cert-search-input');
-    if (searchInput) searchInput.value = '';
-    document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(b => b.classList.remove('active'));
-    const allBtn = document.querySelector('.cert-filter-btn[data-modal-filter="all"]');
-    if (allBtn) allBtn.classList.add('active');
-    document.querySelectorAll('.cert-year-btn').forEach(b => b.classList.remove('active'));
-    const allYearBtn = document.querySelector('.cert-year-btn[data-year="all"]');
-    if (allYearBtn) allYearBtn.classList.add('active');
-    renderCertModal();
-    overlay.classList.add('open');
-    document.body.style.overflowY = 'hidden';
-  }
+  if (!overlay) return;
+
+  // Reset search
+  const si = document.getElementById('cert-search-input');
+  if (si) si.value = '';
+
+  // Reset category filters
+  document.querySelectorAll('.cert-filter-btn[data-modal-filter]').forEach(b => b.classList.remove('active'));
+  const target = prefilter && prefilter !== 'all'
+    ? document.querySelector(`.cert-filter-btn[data-modal-filter="${prefilter}"]`)
+    : document.querySelector('.cert-filter-btn[data-modal-filter="all"]');
+  if (target) target.classList.add('active');
+
+  // Reset year filter
+  document.querySelectorAll('.cert-year-btn').forEach(b => b.classList.remove('active'));
+  const allYear = document.querySelector('.cert-year-btn[data-year="all"]');
+  if (allYear) allYear.classList.add('active');
+
+  renderCertModal(prefilter || 'all');
+  overlay.classList.add('open');
+  document.body.style.overflowY = 'hidden';
 }
 
 function closeCertModal() {
   const overlay = document.getElementById('cert-modal-overlay');
-  if (overlay) {
-    overlay.classList.remove('open');
-    document.body.style.overflowY = '';
-  }
+  if (overlay) overlay.classList.remove('open');
+  document.body.style.overflowY = '';
 }
 
 function closeCertModalOutside(e) {
   if (e.target === document.getElementById('cert-modal-overlay')) closeCertModal();
+}
+
+/* ── HTML HELPERS ────────────────────────────────────────────── */
+function _esc(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function _escAttr(str) {
+  return String(str || '').replace(/'/g, '&#39;').replace(/"/g, '&quot;');
 }
