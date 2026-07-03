@@ -1,5 +1,16 @@
 [
   {
+    "id": 64,
+    "title": "SAE India Membership",
+    "org": "Society of Automotive Engineers (SAE) India",
+    "date": "2025",
+    "category": "leadership",
+    "icon": "fas fa-crown",
+    "level": "Student Member",
+    "description": "Official Student Annual Membership of SAE India, Coimbatore Section (SIS), supporting engagement with automotive and mobility engineering communities. Valid Apr 2025 \u2013 Jul 2027.",
+    "image": "certificates/images/cert-64.jpg"
+  },
+  {
     "id": 1,
     "title": "MATLAB Onramp",
     "org": "MathWorks",

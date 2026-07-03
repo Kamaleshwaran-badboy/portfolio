@@ -1589,6 +1589,13 @@ button { cursor: pointer; font-family: var(--font-main); border: none; backgroun
 
 .patent-role strong { color: var(--gold); }
 
+.patent-download {
+  margin-top: 16px;
+  width: 100%;
+  justify-content: center;
+  gap: 8px;
+}
+
 /* ── RESEARCH SECTION ────────────────────────────────────── */
 .research-grid {
   display: grid;
