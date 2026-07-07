@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initNavbar();
   initMobileDrawer();
+  initResumeDropdown();
   initHeroCanvas();
   initTypewriter();
   initScrollProgress();
@@ -310,6 +311,24 @@ function initMobileDrawer() {
 
   // Close on link click
   document.querySelectorAll('.drawer-links a').forEach(a => a.addEventListener('click', close));
+}
+
+/* ── RESUME DROPDOWN ──────────────────────────────────────────── */
+function initResumeDropdown() {
+  const wrap = document.getElementById('resume-dropdown');
+  const btn  = document.getElementById('resume-btn');
+  const menu = document.getElementById('resume-menu');
+  if (!wrap || !btn || !menu) return;
+
+  function closeMenu() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  function toggleMenu() {
+    const isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  btn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
+  document.addEventListener('click', (e) => { if (!wrap.contains(e.target)) closeMenu(); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 }
 
 /* ── HERO CANVAS (Particles + Blueprint Grid) ────────────────── */
