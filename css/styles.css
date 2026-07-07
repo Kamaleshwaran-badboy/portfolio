@@ -2559,6 +2559,7 @@ a.contact-value:hover { color: var(--gold); }
 
   .hero-actions { flex-direction: column; align-items: center; }
   .hero-actions .btn-lg { width: 100%; max-width: 280px; justify-content: center; }
+  .hero-actions .resume-dropdown { width: 100%; max-width: 280px; }
 }
 
 @media (max-width: 480px) {
@@ -3458,6 +3459,7 @@ img, video, iframe, canvas {
     max-width: 260px;
     justify-content: center;
   }
+  .hero-actions .resume-dropdown { width: 100%; max-width: 260px; }
   .hero-socials { gap: 12px; }
   .social-icon { width: 40px; height: 40px; font-size: 0.9rem; }
   .hero-scroll-hint { bottom: 20px; }
@@ -3966,6 +3968,7 @@ img, video, iframe, canvas {
 /* ── FIX: Hero actions full-width on very small screens ─────── */
 @media (max-width: 360px) {
   .hero-actions .btn-lg { max-width: 100%; }
+  .hero-actions .resume-dropdown { max-width: 100%; }
   .hero-name { font-size: clamp(1.1rem, 7.5vw, 1.8rem); }
   .container { padding: 0 12px; }
 }

@@ -315,20 +315,24 @@ function initMobileDrawer() {
 
 /* ── RESUME DROPDOWN ──────────────────────────────────────────── */
 function initResumeDropdown() {
-  const wrap = document.getElementById('resume-dropdown');
-  const btn  = document.getElementById('resume-btn');
-  const menu = document.getElementById('resume-menu');
-  if (!wrap || !btn || !menu) return;
+  const wraps = document.querySelectorAll('.resume-dropdown');
+  if (!wraps.length) return;
 
-  function closeMenu() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
-  function toggleMenu() {
-    const isOpen = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(isOpen));
-  }
+  wraps.forEach((wrap) => {
+    const btn  = wrap.querySelector('.resume-trigger');
+    const menu = wrap.querySelector('.resume-menu');
+    if (!btn || !menu) return;
 
-  btn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
-  document.addEventListener('click', (e) => { if (!wrap.contains(e.target)) closeMenu(); });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    function closeMenu() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    function toggleMenu() {
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    btn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
+    document.addEventListener('click', (e) => { if (!wrap.contains(e.target)) closeMenu(); });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  });
 }
 
 /* ── HERO CANVAS (Particles + Blueprint Grid) ────────────────── */
